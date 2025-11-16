@@ -2587,6 +2587,18 @@ textarea.form-control-lg {
   }
 }
 
+#domino-mechanics .domino-video video {
+  width: 100%;
+  max-height: 420px;   /* puedes subir/bajar este valor */
+  object-fit: cover;
+}
+
+#domino-mechanics .small-caption {
+  font-size: 0.9rem;   /* más pequeño que el texto normal */
+  padding: 0.5rem 1rem;
+  line-height: 1.3;
+}
+
 .form-select:focus {
   border-color: #deae9c;
   outline: 0;
