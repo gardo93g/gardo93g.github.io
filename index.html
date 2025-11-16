@@ -31,15 +31,11 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-night.min.css" rel="stylesheet">
-
-
-
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar">
-
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
                 aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,66 +43,69 @@
             </button>
             <div class="collapse navbar-collapse align-content-center" id="menu">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 </ul>
-                <!-- <div class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-
-                </div> -->
             </div>
         </div>
     </nav>
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="navbar">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#about">Diego Galdamez</a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
-                </ul>
+    <!-- ABOUT MOVED TO TOP -->
+    <div id="parallaxAboutMe">
+    </div>
+
+    <hr class="m-0" />
+
+    <!-- About-->
+    <section class="resume-section-content" id="about" style="padding: 100px;">
+        <div class="resume-section-content">
+            <h2 class="mb-5">About</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                                src="assets/img/Photo.jpeg" />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-sm-8">
+                            <h2 class="mg-clear">
+                                Edgardo Galdamez
+                            </h2>
+                            <h3 class="mg-clear">
+                                Unity Developer
+                            </h3>
+                            <p class="mg-clear">
+                                gardo93g@gmail.com
+                            </p>
+                            <p class="mg-lg">
+                             I’m a Unity Developer with a bit over 5 years in mobile F2P, mostly working on gameplay systems and UI/VFX flows. I focus on clear feedback, a responsive feel, and LiveOps that stays stable when lots of things are happening. I like connecting core systems, UI sequencing, and backend events so reward screens, animations, and data all stay in sync.
+
+I’ve co-developed playable prototypes, tuned timings and input feel to reduce perceived latency, and cut reward-flow conflicts by using queue-based orchestration. I’ve also improved layouts and accessibility across devices, and wired event/reward screens into REST/JSON endpoints with analytics hooks so what players see matches what the backend records.
+
+I usually work with Unity C#, DOTween, Addressables, Animator, UGUI/UI Toolkit, Cinemachine, Shader Graph, Git, and when it fits the project, Nakama/Firebase/PlayFab. I’m aiming for Gameplay Programmer / Unity Developer roles (remote or relocation), where I can ship clean, reliable features and keep pushing the feel and clarity of the game.
+                            </p>
+                            <br>
+                            <a href="assets/CV.pdf" class="btn btn-primary">More About Me</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav> -->
+    </section>
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="navbar">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#about">Diego Galdamez</a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
+    <hr class="m-0" />
 
-
-
-
-    <!-- <h3 class="text-center">Mi resumen</h3> -->
-
+    <!-- HOME (video background) -->
     <div class="modal-fullscreen" id="home">
         <video class="modal-fullscreen" autoplay muted loop id="back-video">
             <source src="/assets/img/video_home_projects.mp4" type="video/mp4">
         </video>
     </div>
 
-
     <hr class="m-0" />
-
-
 
     <div id="parallaxProject">
     </div>
@@ -148,15 +147,7 @@
                                             <source src="/assets/img/BB-M1.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/jfj1AxZY-Ik?autoplay=1&mute=1&controls=0&playlist=jfj1AxZY-Ik&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 1</b></h5> -->
                                 <p class="text-center p-4">Interacting with the UI and click on the button to spawn an
                                     enemy at the field and start the game.</p>
                             </div>
@@ -167,15 +158,7 @@
                                             <source src="/assets/img/BB-M2.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 2</b></h5> -->
                                 <p class="text-center p-4">Clicking on the button the main character generates the
                                     attack animation and the enemy show another animation when
                                     receive a hit.</p>
@@ -187,15 +170,7 @@
                                             <source src="/assets/img/BB-M3.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 3</b></h5> -->
                                 <p class="text-center p-4">When the potion button is clicked, the main character restore
                                     some part of the health.</p>
                             </div>
@@ -207,7 +182,6 @@
                                         </video>
                                     </div>
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 4</b></h5> -->
                                 <p class="text-center p-4">The special attack may failed, when it does, shows a message
                                     that the attack has been failed.</p>
                             </div>
@@ -219,7 +193,6 @@
                                         </video>
                                     </div>
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 5</b></h5> -->
                                 <p class="text-center p-4">Shows the death animation for the main character when the
                                     health bar is on zero points.</p>
                             </div>
@@ -231,7 +204,6 @@
                                         </video>
                                     </div>
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 6</b></h5> -->
                                 <p class="text-center p-4">Shows the death animation for the enemy, the game ends and
                                     appears a restart button.</p>
                             </div>
@@ -243,7 +215,6 @@
                                         </video>
                                     </div>
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 7</b></h5> -->
                                 <p class="text-center p-4">When the restart button is clicked, the game start again.</p>
                             </div>
                         </div>
@@ -284,15 +255,7 @@
                                             <source src="/assets/img/WR-M1.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/k7JcRndF4Qc?autoplay=1&mute=1&controls=0&playlist=k7JcRndF4Qc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 1 - Infinite floor spawner</b></h5> -->
                                 <p class="text-center p-4">When the character is moving on and hit a box collision, a
                                     new floor spawn on the field, generating an infinite floor.</p>
                             </div>
@@ -303,15 +266,7 @@
                                             <source src="/assets/img/WR-M2.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/2Mqui2EAduw?autoplay=1&mute=1&controls=0&playlist=2Mqui2EAduw&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 2 - Adding Animation Blueprint to a Character</b></h5> -->
                                 <p class="text-center p-4">Adding an animation blueprint to an imported skeletal mesh,
                                     allows to move the characters with the WASD keys and the space bar to jump.
                                 </p>
@@ -323,13 +278,6 @@
                                             <source src="/assets/img/WR-M3.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/idqJWCklvSc?autoplay=1&mute=1&controls=0&playlist=idqJWCklvSc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
                                 <p class="text-center p-4">This mechanic add random obstacle while the character is
                                     moving forward,
@@ -337,34 +285,6 @@
                                     an obstacle, trigger an event who disappear the character and replace with an
                                     explosion animation.</p>
                             </div>
-                            <!-- <div class="slider-card">
-                                <div class="d-flex justify-content-center align-items-center mb-4">
-                                    <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/idqJWCklvSc?autoplay=1&mute=1&controls=0&playlist=idqJWCklvSc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div> -->
-                            <!-- <h5 class="mb-0 text-center"><b>Javascript Tutorials</b></h5>
-                                <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
-                                    temporibus quidem magni qui doloribus quasi natus inventore nisi velit minima.</p>
-                            </div>
-                            <div class="slider-card">
-                                <div class="d-flex justify-content-center align-items-center mb-4">
-                                    <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/k7JcRndF4Qc?autoplay=1&mute=1&controls=0&playlist=k7JcRndF4Qc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                                <h5 class="mb-0 text-center"><b>Bootstrap Tutorials</b></h5>
-                                <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
-                                    temporibus quidem magni qui doloribus quasi natus inventore nisi velit minima.</p>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -403,15 +323,7 @@
                                             <source src="/assets/img/MM-M1.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/jfj1AxZY-Ik?autoplay=1&mute=1&controls=0&playlist=jfj1AxZY-Ik&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 1</b></h5> -->
                                 <p class="text-center p-4">This mechanic gets a mouse X,Y inputs to set an actor
                                     rotation to rotate
                                     the maze.</p>
@@ -423,15 +335,7 @@
                                             <source src="/assets/img/MM-M2.mp4" type="video/mp4">
                                         </video>
                                     </div>
-                                    <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
                                 </div>
-                                <!-- <h5 class="mb-0 text-center"><b>Mechanic 2</b></h5> -->
                                 <p class="text-center p-4">This mechanic activate the win condition when the ball hits a
                                     trigger box
                                     when is escaping the
@@ -443,326 +347,212 @@
                 </div>
             </section>
 
-<hr class="m-0" />
-<br>
-
-<!-- FPS Unity-->
-<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-    <div class="flex-grow-1">
-        <h3 class="mb-0">FPS-D - Unity</h3>
-        <br>
-        <p>FPS-D is a simple project First person shooter created in Unity by a tutorial made on Platzi.</p>
-        <br>
-        <div class="iframe-container">
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/EfpjB2k7TL0?autoplay=1&mute=1&controls=0&playlist=EfpjB2k7TL0&loop=1&"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-
-<section id="slider" class="pt-5">
-    <div class="container">
-        <h1 class="text-center"><b>Mechanics Log</b></h1>
-        <div class="slider">
-            <div class="owl-carousel">
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/FPS-D-1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/jfj1AxZY-Ik?autoplay=1&mute=1&controls=0&playlist=jfj1AxZY-Ik&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">Move around the camera of the actor.</p>
-                </div>
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/FPS-D-2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">Move the character around the world.
-                    </p>
-                </div>
-
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/FPS-D-3.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                                        <iframe width="560" height="315"
-                                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                                            title="YouTube video player" frameborder="0"
-                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                            allowfullscreen></iframe>
-                                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">Shoot and destroy enemy on hit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
             <hr class="m-0" />
             <br>
 
-<!-- Vhirdoc Unity-->
-<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-    <div class="flex-grow-1">
-        <h3 class="mb-0">Vhirdoc - Unity</h3>
-        <br>
-        <p>Vhirdoc is a project by a tutorial made on Platzi, inspired by the famous game Flappy Bird.</p>
-        <br>
-        <div class="iframe-container">
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/PEMQFtYidWM?autoplay=1&mute=1&controls=0&playlist=PEMQFtYidWM&loop=1&"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-
-<section id="slider" class="pt-5">
-    <div class="container">
-        <h1 class="text-center"><b>Mechanics Log</b></h1>
-        <div class="slider">
-            <div class="owl-carousel">
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/V-M1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/jfj1AxZY-Ik?autoplay=1&mute=1&controls=0&playlist=jfj1AxZY-Ik&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
+            <!-- FPS Unity-->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">FPS-D - Unity</h3>
+                    <br>
+                    <p>FPS-D is a simple project First person shooter created in Unity by a tutorial made on Platzi.</p>
+                    <br>
+                    <div class="iframe-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/EfpjB2k7TL0?autoplay=1&mute=1&controls=0&playlist=EfpjB2k7TL0&loop=1&"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-                    <p class="text-center p-4">Spawn obstacles in the scene.</p>
-                </div>
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/V-M2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">Shows the Game Over UI when the character hit the obstacle and reload the game when press the play button.
-                    </p>
-                </div>
-
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/V-M3.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                                        <iframe width="560" height="315"
-                                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                                            title="YouTube video player" frameborder="0"
-                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                            allowfullscreen></iframe>
-                                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">Add a score count when pass through the obstacles.
-                    </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<hr class="m-0" />
 
-<br>
-
-<!-- KnightRunner Unity-->
-<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-    <div class="flex-grow-1">
-        <h3 class="mb-0">KnightRunner - Unity</h3>
-        <br>
-        <p>KnightRunner is a 2D platform project by a tutorial made on Platzi, moving forward and trying to get as many
-        collectibles as possible.</p>
-        <br>
-        <div class="iframe-container">
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/04QwsVZ9mmU?autoplay=1&mute=1&controls=0&playlist=04QwsVZ9mmU&loop=1&"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-
-<section id="slider" class="pt-5">
-    <div class="container">
-        <h1 class="text-center"><b>Mechanics Log</b></h1>
-        <div class="slider">
-            <div class="owl-carousel">
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/KR-M1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/jfj1AxZY-Ik?autoplay=1&mute=1&controls=0&playlist=jfj1AxZY-Ik&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">Spawn platforms when the character is moving forward and destroy platforms that the character is leaving behind.</p>
-                </div>
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/KR-M2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">If the character die shows a UI to reload the game and start over again.
-                    </p>
-                </div>
-
-                <div class="slider-card">
-                    <div class="d-flex justify-content-center align-items-center mb-4">
-                        <div class="video" id="home">
-                            <video class="img-fluid" autoplay muted loop id="back-video">
-                                <source src="/assets/img/KR-M3.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- <div class="iframe-container">
-                                                        <iframe width="560" height="315"
-                                                            src="https://www.youtube.com/embed/CEZMCGS1CYc?autoplay=1&mute=1&controls=0&playlist=CEZMCGS1CYc&loop=1&"
-                                                            title="YouTube video player" frameborder="0"
-                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                            allowfullscreen></iframe>
-                                                    </div> -->
-                    </div>
-                    <p class="text-center p-4">Add a score count when pass through the coins.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<hr class="m-0" />
-
-            <div id="parallaxAboutMe">
-            </div>
-            <hr class="m-0" />
-            <!-- About-->
-            <section class="resume-section-content" id="about" style="padding: 100px;">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">About</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                                        src="assets/img/Photo.jpeg" />
+            <section id="slider" class="pt-5">
+                <div class="container">
+                    <h1 class="text-center"><b>Mechanics Log</b></h1>
+                    <div class="slider">
+                        <div class="owl-carousel">
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/FPS-D-1.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
                                 </div>
-                                <br>
-                                <br>
-                                <div class="col-sm-8">
-                                    <h2 class="mg-clear">
-                                        Diego Galdamez
-                                    </h2>
-                                    <h3 class="mg-clear">
-                                        UE4 Generalist Programmer
-                                    </h3>
-                                    <p class="mg-clear">
-                                        diegogaldamez08@gmail.com
-                                    </p>
-                                    <p class="mg-lg">
-                                        I'm a generalist software developer. I started my carreer on the manufacturing
-                                        industry, since the very early days I
-                                        discovered my passion to the tech, I found myself working from engineering
-                                        management to data analitics and everything
-                                        in between always oriented to tech, I have knowledge in UE4 and Unity. I have
-                                        experience on Python, PhP and Java Script.
-                                    </p>
-                                    <br>
-                                    <a href="assets/CV.pdf" class="btn btn-primary">More About Me</a>
+                                <p class="text-center p-4">Move around the camera of the actor.</p>
+                            </div>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/FPS-D-2.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
                                 </div>
+                                <p class="text-center p-4">Move the character around the world.
+                                </p>
+                            </div>
+
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/FPS-D-3.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <p class="text-center p-4">Shoot and destroy enemy on hit.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </section>
 
             <hr class="m-0" />
             <br>
 
+            <!-- Vhirdoc Unity-->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Vhirdoc - Unity</h3>
+                    <br>
+                    <p>Vhirdoc is a project by a tutorial made on Platzi, inspired by the famous game Flappy Bird.</p>
+                    <br>
+                    <div class="iframe-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/PEMQFtYidWM?autoplay=1&mute=1&controls=0&playlist=PEMQFtYidWM&loop=1&"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
 
+            <section id="slider" class="pt-5">
+                <div class="container">
+                    <h1 class="text-center"><b>Mechanics Log</b></h1>
+                    <div class="slider">
+                        <div class="owl-carousel">
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/V-M1.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <p class="text-center p-4">Spawn obstacles in the scene.</p>
+                            </div>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/V-M2.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <p class="text-center p-4">Shows the Game Over UI when the character hit the obstacle and reload the game when press the play button.
+                                </p>
+                            </div>
 
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/V-M3.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <p class="text-center p-4">Add a score count when pass through the obstacles.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
 
+            <br>
 
-            <!-- Owl Carousel-->
-            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <!-- KnightRunner Unity-->
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">KnightRunner - Unity</h3>
+                    <br>
+                    <p>KnightRunner is a 2D platform project by a tutorial made on Platzi, moving forward and trying to get as many
+                    collectibles as possible.</p>
+                    <br>
+                    <div class="iframe-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/04QwsVZ9mmU?autoplay=1&mute=1&controls=0&playlist=04QwsVZ9mmU&loop=1&"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
 
-            <script src="js/owl.carousel.min.js"></script>
-            <script src="js/script.js"></script>
+            <section id="slider" class="pt-5">
+                <div class="container">
+                    <h1 class="text-center"><b>Mechanics Log</b></h1>
+                    <div class="slider">
+                        <div class="owl-carousel">
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/KR-M1.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <p class="text-center p-4">Spawn platforms when the character is moving forward and destroy platforms that the character is leaving behind.</p>
+                            </div>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/KR-M2.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <p class="text-center p-4">If the character die shows a UI to reload the game and start over again.
+                                </p>
+                            </div>
 
-            <!-- Owl Carousel-->
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <div class="video" id="home">
+                                        <video class="img-fluid" autoplay muted loop id="back-video">
+                                            <source src="/assets/img/KR-M3.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <p class="text-center p-4">Add a score count when pass through the coins.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <br>
+        </div>
+    </section>
 
+    <!-- Owl Carousel-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                crossorigin="anonymous"></script>
-            <!-- Core theme JS-->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
 
+    <!-- Owl Carousel-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
