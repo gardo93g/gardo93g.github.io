@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    // Carousel para TreeCloud (Ancho normal, puede mostrar 2)
+    // Carousel General (Para TreeCloud y Personal Projects)
     $(".project-carousel").owlCarousel({
         loop: true,
         margin: 15,
@@ -15,7 +15,7 @@ $(document).ready(function(){
         }
     });
 
-    // Carousel para Kubiak (Columnas divididas) y otros de un solo item
+    // Carousel Single (Para columnas divididas en Kubiak)
     $(".single-item-carousel").owlCarousel({
         loop: true,
         margin: 10,
@@ -34,13 +34,15 @@ $(document).ready(function(){
             $('.navbar').removeClass('shrink');
         }
     });
-
-    // Video Hover Effect (Optional, if you prefer hover over autoplay)
-    /*
-    $(".project-card").hover(function(){
-        $(this).find("video").get(0).play();
-    }, function(){
-        $(this).find("video").get(0).pause();
+    
+    // Smooth scroll for anchor links (si no lo tenías antes)
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 70
+            }, 1000);
+        }
     });
-    */
 });

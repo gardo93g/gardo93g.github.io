@@ -32,18 +32,36 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Work Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#personal-projects">R&D</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero-section d-flex align-items-center justify-content-center" id="about-hero">
-        <div class="hero-text-container">
-            <h1 class="glitch-text" data-text="ABOUT ME">ABOUT ME</h1>
-            <p class="hero-subtitle">UNITY UI DEVELOPER // GAMEPLAY PROGRAMMER</p>
+    <!-- LANDING PAGE VIDEO HERO -->
+    <header id="home" class="landing-hero">
+        <!-- Video Background -->
+        <div class="video-overlay"></div>
+        <video class="video-bg" autoplay muted loop playsinline>
+            <source src="assets/img/Landingpage.mp4" type="video/mp4">
+        </video>
+
+        <!-- Hero Content -->
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="text-center hero-content">
+                <h1 class="glitch-main">EDGARDO GALDAMEZ</h1>
+                <div class="hero-subtitle-box">
+                    <span class="typing-effect">UNITY UI DEVELOPER // GAMEPLAY SYSTEMS</span>
+                </div>
+                <div class="mt-5">
+                    <a href="#about" class="btn-scroll-down">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -91,32 +109,25 @@
             <!-- BLOCK 1: HARMONY GAMES -->
             <div class="experience-block glass-card p-4 mb-5">
                 <div class="row align-items-center">
-                    <!-- Video Left -->
                     <div class="col-lg-6 mb-4 mb-lg-0">
                         <div class="video-frame">
                             <iframe src="https://www.youtube.com/embed/FhhreQr4pVI?autoplay=0&mute=1&rel=0" title="Domino Delights Trailer" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <!-- Info Right -->
                     <div class="col-lg-6">
                         <h3 class="mb-3 text-white">Domino Delights</h3>
                         <p class="mb-4 text-muted-light">
                             Worked as Unity Developer on Domino Delights. My responsibilities included implementing UI/UX flows, VFX, LiveOps integrations, and core mechanics.
                         </p>
-                        
                         <hr class="neon-hr my-4" />
-                        
                         <dl class="row experience-details">
                             <dt class="col-sm-4 text-cyan">Position:</dt>
                             <dd class="col-sm-8">Unity Developer</dd>
-
                             <dt class="col-sm-4 text-cyan">Company:</dt>
                             <dd class="col-sm-8">Harmony Games</dd>
-
                             <dt class="col-sm-4 text-cyan">Release:</dt>
                             <dd class="col-sm-8">10 Apr 2025</dd>
                         </dl>
-
                         <div class="mt-4">
                             <a class="btn btn-custom" href="https://harmonygames.co/" target="_blank" rel="noopener noreferrer">
                                 Visit Harmony Games <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
@@ -126,14 +137,13 @@
                 </div>
             </div>
 
-            <!-- BLOCK 2: KUBIAK LLC (Updated with Crypto) -->
-            <div class="experience-block glass-card p-4 mb-5">                
-                <!-- Text Info Top -->
+            <!-- BLOCK 2: KUBIAK LLC -->
+            <div class="experience-block glass-card p-4 mb-5">
                 <div class="row mb-4">
                     <div class="col-lg-8">
                         <h3 class="mb-3 text-white">Game Prototypes & Mechanics</h3>
                         <p class="text-muted-light">
-                            Worked at Kubiak LLC as a Unity Developer. I developed varied prototypes ranging from interactive physical interactions (cleaning/feeding mechanics) to complex turn-based strategy and automotive simulation games involving crypto economies.
+                            Worked at Kubiak LLC as a Unity Developer. I developed varied prototypes ranging from interactive physical interactions to complex turn-based strategy and automotive simulation games involving crypto economies.
                         </p>
                     </div>
                     <div class="col-lg-4 border-start-lg border-secondary">
@@ -143,81 +153,41 @@
                         </dl>
                     </div>
                 </div>
-
                 <hr class="neon-hr mb-4" />
-
-                <!-- Dual Carousel Row -->
                 <div class="row">
-                    <!-- Left Column: Mechanics -->
+                    <!-- Mechanics R&D -->
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h5 class="text-cyan mb-3" style="font-family: var(--font-mono);"><i class="fas fa-horse-head me-2"></i>Mechanics R&D</h5>
+                        <h5 class="text-cyan mb-3 font-mono"><i class="fas fa-horse-head me-2"></i>Mechanics R&D</h5>
                         <div class="owl-carousel owl-theme single-item-carousel">
-                            <!-- Slide 1 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/DD-M1.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Stable Cleaning</h5>
-                                    <p>Drag-and-drop cleaning mechanic.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/DD-M1.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Stable Cleaning</h5><p>Drag-and-drop cleaning mechanic.</p></div>
                             </div>
-                            <!-- Slide 2 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/DD-M2.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Horse Grooming</h5>
-                                    <p>Texture masking and particle interactions.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/DD-M2.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Horse Grooming</h5><p>Texture masking and particle interactions.</p></div>
                             </div>
-                            <!-- Slide 3 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/DD-M3.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Feeding System</h5>
-                                    <p>Physics-based object interaction.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/DD-M3.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Feeding System</h5><p>Physics-based object interaction.</p></div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Right Column: Crypto -->
+                    <!-- Crypto -->
                     <div class="col-lg-6">
-                        <h5 class="text-cyan mb-3" style="font-family: var(--font-mono);"><i class="fas fa-coins me-2"></i>Crypto Prototypes</h5>
+                        <h5 class="text-cyan mb-3 font-mono"><i class="fas fa-coins me-2"></i>Crypto Prototypes</h5>
                         <div class="owl-carousel owl-theme single-item-carousel">
-                            <!-- Slide 1 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/GG-M1.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Turn-Based Strategy</h5>
-                                    <p>UI/UX implementation for crypto economy loop.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/GG-M1.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Turn-Based Strategy</h5><p>UI/UX implementation for crypto economy loop.</p></div>
                             </div>
-                            <!-- Slide 2 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/GG-M2.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Car Simulation</h5>
-                                    <p>Vehicle physics and upgrade system UI.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/GG-M2.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Car Simulation</h5><p>Vehicle physics and upgrade system UI.</p></div>
                             </div>
-                            <!-- Slide 3 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/GG-M3.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Simulation Mechanics</h5>
-                                    <p>Core loop prototyping.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/GG-M3.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Simulation Mechanics</h5><p>Core loop prototyping.</p></div>
                             </div>
                         </div>
                     </div>
@@ -227,72 +197,102 @@
             <!-- BLOCK 3: TREECLOUD -->
             <div class="experience-block glass-card p-4 mb-5">
                 <div class="row align-items-center">
-                    <!-- Carousel Left -->
                     <div class="col-lg-7 mb-4 mb-lg-0">
                          <div class="owl-carousel owl-theme project-carousel">
-                            <!-- Slide 1 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/TC-M1.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Kinect Ping Pong</h5>
-                                    <p>Prototype with Unreal Engine 4 using Kinect.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/TC-M1.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Kinect Ping Pong</h5><p>Prototype with Unreal Engine 4 using Kinect.</p></div>
                             </div>
-                            <!-- Slide 2 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/TC-M2.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Smash Bug</h5>
-                                    <p>Motion detection prototype with UE4.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/TC-M2.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Smash Bug</h5><p>Motion detection prototype with UE4.</p></div>
                             </div>
-                            <!-- Slide 3 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/TC-M3.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>LiDAR Viz</h5>
-                                    <p>Data visualization prototype using LiDAR data.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/TC-M3.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>LiDAR Viz</h5><p>Data visualization prototype using LiDAR data.</p></div>
                             </div>
-                             <!-- Slide 4 -->
                             <div class="item project-card">
-                                <video class="w-100" autoplay muted loop playsinline>
-                                    <source src="assets/img/TC-M4.mp4" type="video/mp4">
-                                </video>
-                                <div class="project-info">
-                                    <h5>Memory Game</h5>
-                                    <p>Logic prototype using Kinect sensor.</p>
-                                </div>
+                                <video class="w-100" autoplay muted loop playsinline><source src="assets/img/TC-M4.mp4" type="video/mp4"></video>
+                                <div class="project-info"><h5>Memory Game</h5><p>Logic prototype using Kinect sensor.</p></div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Info Right -->
                     <div class="col-lg-5">
                         <h3 class="mb-3 text-white">Internship Prototypes</h3>
                         <p class="mb-4 text-muted-light">
                             Worked at TreeCloud as an intern Developer implementing mechanics for various prototypes using emerging tech like Kinect and LiDAR.
                         </p>
-                        
                         <hr class="neon-hr my-4" />
-                        
                         <dl class="row experience-details">
                             <dt class="col-sm-4 text-cyan">Position:</dt>
                             <dd class="col-sm-8">Intern Developer</dd>
-
                             <dt class="col-sm-4 text-cyan">Company:</dt>
                             <dd class="col-sm-8">TreeCloud</dd>
                         </dl>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- DIVIDER SECTION -->
+    <div class="divider-section d-flex align-items-center justify-content-center" id="personal-divider">
+        <div class="divider-content text-center">
+            <h2 class="big-outline-text">PERSONAL</h2>
+            <h2 class="big-filled-text">PROJECTS</h2>
+        </div>
+    </div>
+
+    <!-- PERSONAL PROJECTS SECTION -->
+    <section class="content-section" id="personal-projects">
+        <div class="container">
+            <div class="glass-card p-4">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h3 class="mb-2 text-cyan">Unreal Engine 4 R&D</h3>
+                        <p class="text-muted-light mx-auto" style="max-width: 700px;">
+                            A playground for technical exploration. These prototypes focus on mastering the Unreal Engine 4 animation pipeline through retargeting complex humanoid rigs and fine-tuning rigid body collisions for realistic environmental feedback.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="owl-carousel owl-theme project-carousel">
+                            <!-- Slide 1 -->
+                            <div class="item project-card">
+                                <video class="w-100" autoplay muted loop playsinline>
+                                    <source src="assets/img/PP-M1.mp4" type="video/mp4">
+                                </video>
+                                <div class="project-info">
+                                    <h5>Animation Retargeting</h5>
+                                    <p>Mapping human rigs to animated fight.</p>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="item project-card">
+                                <video class="w-100" autoplay muted loop playsinline>
+                                    <source src="assets/img/PP-M2.mp4" type="video/mp4">
+                                </video>
+                                <div class="project-info">
+                                    <h5>Swap characters</h5>
+                                    <p>Testing Animation retargeting in UE4 with Paragon characters.</p>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="item project-card">
+                                <video class="w-100" autoplay muted loop playsinline>
+                                    <source src="assets/img/PP-M3.mp4" type="video/mp4">
+                                </video>
+                                <div class="project-info">
+                                    <h5>Force shield VFX</h5>
+                                    <p>Testing Force shield VFX in UE4 states.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
