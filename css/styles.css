@@ -40,7 +40,8 @@ a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
 .landing-hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* Pantalla completa */
+    height: 100vh; /* Fallback */
+    height: 100dvh; /* Altura dinámica para móviles (evita problemas con la barra de navegación del navegador) */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -49,15 +50,12 @@ a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
 
 .video-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ESTO ES CLAVE: Asegura que el video cubra el área sin desbordarse ni deformarse */
     z-index: 0;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
 }
 
 .video-overlay {
@@ -66,24 +64,30 @@ a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(11,12,16,0.7) 0%, rgba(11,12,16,0.4) 50%, var(--bg-dark) 100%);
+    background: linear-gradient(180deg, rgba(11,12,16,0.6) 0%, rgba(11,12,16,0.5) 50%, var(--bg-dark) 100%);
     z-index: 1;
     background-size: 4px 4px;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 0); /* Scanline effect sutil */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    width: 100%;
+    padding: 0 15px; /* Padding lateral para que no toque los bordes en móvil */
+    max-width: 1200px; /* Contener el ancho en pantallas muy grandes */
 }
 
 .glitch-main {
-    font-size: 5rem;
+    /* CLAMP: Escala el texto fluidamente entre 2.5rem (móvil) y 6rem (desktop) */
+    font-size: clamp(2.5rem, 8vw, 6rem); 
     font-weight: 900;
     color: #fff;
-    letter-spacing: 5px;
+    letter-spacing: clamp(2px, 1vw, 5px); /* Espaciado dinámico */
     text-shadow: 4px 4px 0px var(--accent-dim);
     margin-bottom: 20px;
+    line-height: 1.1; /* Mejor interlineado en móvil */
+    word-wrap: break-word;
 }
 
 .hero-subtitle-box {
@@ -92,13 +96,16 @@ a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
     padding: 10px 20px;
     border: 1px solid var(--accent-cyan);
     box-shadow: 0 0 15px rgba(102, 252, 241, 0.2);
+    max-width: 90%; /* Evita que la caja se salga en pantallas muy estrechas */
 }
 
 .typing-effect {
     font-family: var(--font-mono);
     color: var(--accent-cyan);
-    font-size: 1.5rem;
+    /* CLAMP para el subtítulo también */
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
     letter-spacing: 2px;
+    white-space: normal; /* Permitir salto de línea en móvil si es necesario */
 }
 
 .btn-scroll-down {
@@ -112,7 +119,9 @@ a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
     color: var(--accent-cyan);
     font-size: 1.5rem;
     animation: bounce 2s infinite;
+    margin-top: 2rem;
 }
+
 .btn-scroll-down:hover {
     background: var(--accent-cyan);
     color: #000;
@@ -196,4 +205,34 @@ a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
     .typing-effect { font-size: 1rem; }
     .big-outline-text, .big-filled-text { font-size: 2.5rem; }
     .section-title-overlay { font-size: 2rem; top: 10px; }
+}
+
+@media (max-width: 768px) {
+    .big-outline-text, .big-filled-text { 
+        font-size: clamp(2.5rem, 10vw, 4rem); /* Ajuste para los títulos de sección grandes */
+    }
+    
+    .section-title-overlay { 
+        font-size: 1.8rem; 
+        top: 15px; 
+        right: 15px;
+        opacity: 0.08; /* Un poco más visible en móvil */
+    }
+
+    .glass-card {
+        padding: 1.5rem !important; /* Menos padding interno en tarjetas */
+    }
+
+    .experience-details dd {
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 1px solid var(--accent-dim);
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    
+    /* Ajuste para el video de experiencia en móvil */
+    .video-frame iframe {
+        height: 200px;
+    }
 }
