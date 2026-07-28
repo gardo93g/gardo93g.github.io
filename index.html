@@ -4,28 +4,63 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Edgardo Galdamez - Unity Developer Portfolio" />
+    <meta name="description" content="Unity UI Programmer and C# Developer with 5+ years of experience building mobile F2P interfaces, gameplay flows, LiveOps integrations, and production-ready systems." />
     <meta name="author" content="Edgardo Galdamez" />
-    <title>Edgardo Galdamez | Unity Developer</title>
+    <title>Edgardo Galdamez | Unity UI Programmer</title>
+    <link rel="canonical" href="https://gardo93g.github.io/" />
+    <meta name="theme-color" content="#0b0c10" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gardo93g.github.io/" />
+    <meta property="og:title" content="Edgardo Galdamez | Unity UI Programmer" />
+    <meta property="og:description" content="5+ years building responsive Unity UI, gameplay flows, LiveOps integrations, and mobile F2P systems." />
+    <meta property="og:image" content="https://gardo93g.github.io/assets/img/Photo.jpeg" />
+    <meta property="og:image:alt" content="Edgardo Galdamez" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous" defer></script>
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Edgardo Alejandro Galdamez Velasquez",
+        "url": "https://gardo93g.github.io/",
+        "jobTitle": "Unity UI Programmer and Unity C# Developer",
+        "email": "mailto:gardo93g@gmail.com",
+        "sameAs": [
+            "https://github.com/gardo93g",
+            "https://www.linkedin.com/in/edgardo-g-930568143"
+        ],
+        "knowsAbout": [
+            "Unity",
+            "C#",
+            "Unity UI Toolkit",
+            "Unity uGUI",
+            "Mobile game development",
+            "LiveOps",
+            "DOTween",
+            "Addressables"
+        ]
+    }
+    </script>
 </head>
 
 <body id="page-top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="#page-top">&lt;EG&gt;</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,8 +71,9 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Work Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#personal-projects">R&D Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3">
-                        <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" class="btn btn-sm btn-outline-light font-mono" style="border-radius:0; padding: 5px 15px;">CV</a>
+                        <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light font-mono nav-cv">CV</a>
                     </li>
                 </ul>
             </div>
@@ -48,51 +84,68 @@
     <header class="landing-hero">
         <div class="video-overlay"></div>
         <!-- Assuming video exists, if not it falls back to background color -->
-        <video class="video-bg" autoplay muted loop playsinline poster="assets/img/background.png">
+        <video class="video-bg" autoplay muted loop playsinline preload="metadata" poster="assets/img/background.png" aria-hidden="true">
             <source src="assets/img/Landingpage.mp4" type="video/mp4">
         </video>
 
-        <div class="hero-content">
-            <h1 class="glitch-main" >EDGARDO GALDAMEZ</h1>
-            <div class="hero-subtitle-box">
-                <span class="typing-effect">UNITY UI DEVELOPER // GAMEPLAY SYSTEMS</span>
+        <div class="hero-content container">
+            <div class="hero-panel">
+            <h1 class="glitch-main">EDGARDO GALDAMEZ</h1>
+            <p class="hero-eyebrow font-mono">UNITY · MOBILE F2P · REMOTE EXPERIENCE</p>
+            <p class="hero-role font-mono">UNITY UI PROGRAMMER // UNITY C# DEVELOPER</p>
+            <p class="hero-summary">5+ years building polished player-facing interfaces, gameplay flows, LiveOps integrations, and maintainable systems for mobile games.</p>
+            <div class="hero-actions">
+                <a href="#experience" class="btn-custom btn-custom-filled">View selected work</a>
+                <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-custom">Download CV</a>
+                <a href="#contact" class="text-link">Contact me <i class="fas fa-arrow-right ms-1" aria-hidden="true"></i></a>
             </div>
-            <div class="mt-5">
-                <a href="#about" class="text-cyan" style="font-size: 1.5rem; animation: bounce 2s infinite;">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
+            <ul class="hero-proof list-unstyled" aria-label="Professional highlights">
+                <li><strong>5+</strong><span>Years in game development</span></li>
+                <li><strong>F2P</strong><span>Mobile production experience</span></li>
+                <li><strong>EN / ES</strong><span>Remote collaboration</span></li>
+            </ul>
             </div>
         </div>
     </header>
 
     <!-- ABOUT SECTION -->
+    <main id="main-content">
     <section class="content-section" id="about">
         <div class="container">
-            <div class="row align-items-center glass-card p-5">
+            <div class="row align-items-center glass-card profile-card p-4 p-lg-5">
                 <div class="col-lg-4 text-center mb-4 mb-lg-0">
                     <div class="profile-frame">
-                        <img class="profile-img" src="assets/img/Photo.png" alt="Edgardo Galdamez" onerror="this.src='assets/img/Photo.jpeg'"/>
+                        <img class="profile-img" src="assets/img/Photo.jpeg" width="250" height="250" alt="Portrait of Edgardo Galdamez"/>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <h5 class="text-cyan font-mono mb-2">01 // PROFILE</h5>
-                    <h2 class="text-uppercase mb-3">Edgardo Galdamez</h2>
-                    <p class="lead mb-4 text-light opacity-75">
-                        I’m a <strong>Unity Developer</strong> with over 5 years of experience in mobile F2P. I specialize in building responsive UI flows, connecting LiveOps to backend systems, and polishing gameplay feel. My focus is on creating systems that are scalable and providing players with immediate, satisfying feedback.
+                    <h2 class="text-uppercase mb-3">Engineering UI that feels good to play</h2>
+                    <p class="lead mb-3 text-light opacity-75">
+                        I am a <strong>Unity UI Programmer and C# Developer</strong> specializing in uGUI, UI Toolkit, animated screen flows, and the connection between interface, gameplay, progression, backend data, and LiveOps.
                     </p>
+                    <p class="text-light opacity-75 mb-4">
+                        I translate Figma designs into responsive production interfaces, profile mobile performance, debug live issues, and collaborate with designers, artists, and engineers across remote teams.
+                    </p>
+                    <div class="profile-meta font-mono">
+                        <span><i class="fas fa-location-dot" aria-hidden="true"></i> San Salvador, El Salvador</span>
+                        <span><i class="fas fa-globe" aria-hidden="true"></i> Spanish · English</span>
+                        <span><i class="fas fa-briefcase" aria-hidden="true"></i> Remote experience with US teams</span>
+                    </div>
                     
-                    <div class="mb-4">
+                    <div class="mb-4 tech-stack" aria-label="Technology stack">
                         <span class="tech-tag">C# / .NET</span>
+                        <span class="tech-tag">Unity uGUI</span>
                         <span class="tech-tag">Unity UI Toolkit</span>
                         <span class="tech-tag">DOTween</span>
                         <span class="tech-tag">Addressables</span>
                         <span class="tech-tag">Git</span>
                         <span class="tech-tag">LiveOps Integration</span>
                         <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Shader Graph</span>
+                        <span class="tech-tag">Figma</span>
                     </div>
 
-                    <a href="assets/CV.pdf" target="_blank" class="btn-custom">
+                    <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-custom">
                         Download CV <i class="fas fa-download ms-2"></i>
                     </a>
                 </div>
@@ -101,7 +154,7 @@
     </section>
 
     <!-- DIVIDER -->
-    <div class="divider-section d-flex align-items-center justify-content-center">
+    <div class="divider-section d-flex align-items-center justify-content-center" aria-hidden="true">
         <div class="container position-relative">
             <h2 class="big-outline-text">PROFESSIONAL</h2>
             <h2 class="big-filled-text">EXPERIENCE</h2>
@@ -113,53 +166,94 @@
         <div class="container">
             
             <!-- JOB 1: HARMONY GAMES -->
-            <div class="glass-card p-4 p-lg-5 mb-5">
-                <div class="row">
-                    <div class="col-lg-5 mb-4 mb-lg-0">
-                        <h5 class="text-cyan font-mono">02 // RECENT WORK</h5>
-                        <h3 class="mb-2">Domino Delights</h3>
-                        <h6 class="text-muted mb-3 font-mono">Harmony Games | Unity Developer | 2025</h6>
-                        <p class="text-light opacity-75 mb-4">
-                            Worked as Unity Developer implementing core UI/UX flows, VFX, LiveOps integrations, and game mechanics. Focused on responsive layout and smooth transitions.
-                        </p>
-                        <ul class="list-unstyled text-light opacity-75 small">
-                            <li class="mb-2"><i class="fas fa-check text-cyan me-2"></i>Implemented scalable UI systems</li>
-                            <li class="mb-2"><i class="fas fa-check text-cyan me-2"></i>Integrated LiveOps events</li>
-                            <li><i class="fas fa-check text-cyan me-2"></i>Optimized mobile performance</li>
-                        </ul>
-                        <a href="https://harmonygames.co/" target="_blank" class="btn btn-link text-cyan ps-0 mt-3">
-                            Visit Studio <i class="fas fa-external-link-alt ms-1"></i>
-                        </a>
+            <article class="glass-card experience-card p-4 p-lg-5 mb-5">
+                <div class="experience-header">
+                    <div>
+                        <h5 class="text-cyan font-mono">02 // SHIPPED MOBILE F2P</h5>
+                        <h3>Harmony Games - Selected Work</h3>
+                        <h6 class="text-muted font-mono">Mobile Game Developer | Apr 2023 - Oct 2025 | Remote, USA</h6>
                     </div>
+                    <div class="evidence-tags d-none d-md-flex">
+                        <span>Unity</span><span>C#</span><span>DOTween</span><span>LiveOps</span>
+                    </div>
+                </div>
+                <div class="row g-4 mb-5">
                     <div class="col-lg-7">
-                        <div class="showcase-viewport">
-                            <!-- Single video showcase since it's a trailer -->
-                            <iframe src="https://www.youtube.com/embed/FhhreQr4pVI?rel=0" title="Domino Delights" allowfullscreen style="border:0;"></iframe>
+                        <p class="text-light opacity-75">Built and maintained player-facing Unity interfaces and interactive flows for a live mobile free-to-play title.</p>
+                        <ul class="achievement-list mb-0">
+                            <li>Implemented HUDs, menus, pop-ups, progression screens, events, and animated reward presentations.</li>
+                            <li>Built DOTween and Addressables sequences with state validation, gating, and queue management.</li>
+                            <li>Connected UI to seasonal content, Firebase, Firestore, REST services, and analytics.</li>
+                            <li>Established a Figma-to-Unity workflow and supported production debugging through Crashlytics.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="impact-callout">
+                            <span class="font-mono">SELECTED WORK</span>
+                            <strong>Domino Delights production work and Match3D prototypes</strong>
+                            <p>Grouped by project so recruiters can quickly understand where each implementation belongs.</p>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="showcase-container harmony-showcase" id="harmony-showcase">
+                    <div class="showcase-viewport portrait-viewport">
+                        <video id="harmony-video" class="project-video" muted loop playsinline controls preload="none" poster="assets/img/harmony-liveops-flow.jpg" aria-label="Harmony Games work sample">
+                            <source data-src="assets/img/harmony-liveops-flow.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="showcase-menu" aria-label="Select a Harmony Games work sample">
+                        <p class="menu-label font-mono">HARMONY GAMES // WORK SAMPLES</p>
+                        <div class="showcase-copy" aria-live="polite">
+                            <h4 id="harmony-title">LiveOps &amp; Progression Flow</h4>
+                            <p id="harmony-desc">Domino Delights: progression map, quest and event entry points, boosters, rewards, and level-complete transitions.</p>
+                            <p class="sample-audio-note font-mono" data-audio-note hidden><i class="fas fa-volume-high" aria-hidden="true"></i> Use the video controls to hear the implemented SFX.</p>
+                        </div>
+                        <p class="sample-group-label font-mono">DOMINO DELIGHTS</p>
+                        <button type="button" class="mechanic-trigger active" aria-pressed="true" data-showcase="harmony" data-video="assets/img/harmony-liveops-flow.mp4" data-poster="assets/img/harmony-liveops-flow.jpg" data-title="LiveOps &amp; Progression Flow" data-description="Domino Delights: progression map, quest and event entry points, boosters, rewards, and level-complete transitions.">
+                            <span class="trigger-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></span><span><strong>LiveOps &amp; Progression</strong><small>Events, rewards, and state flow</small></span>
+                        </button>
+                        <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="harmony" data-video="assets/img/harmony-tile-animations.mp4" data-poster="assets/img/harmony-tile-animations.jpg" data-title="Tile Motion &amp; Gameplay Feedback" data-description="Domino Delights: tile dealing, placement, matching, and responsive interaction feedback.">
+                            <span class="trigger-icon"><i class="fas fa-table-cells-large" aria-hidden="true"></i></span><span><strong>Tile Motion &amp; Feedback</strong><small>Interaction and animation</small></span>
+                        </button>
+                        <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="harmony" data-video="assets/img/harmony-streak-reward-vfx.mp4" data-poster="assets/img/harmony-streak-reward-vfx.jpg" data-title="Reward VFX &amp; Animation" data-description="Domino Delights: streak reward concept focused on reveal timing, celebratory motion, and polished visual feedback.">
+                            <span class="trigger-icon"><i class="fas fa-star" aria-hidden="true"></i></span><span><strong>Reward VFX &amp; Animation</strong><small>Game feel and visual polish</small></span>
+                        </button>
+                        <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="harmony" data-video="assets/img/harmony-domino-adventures-minigame.mp4" data-poster="assets/img/harmony-domino-adventures-minigame.jpg" data-title="Domino Adventures Minigame" data-description="Domino Delights: built this minigame from its initial implementation through the final production-ready version.">
+                            <span class="trigger-icon"><i class="fas fa-puzzle-piece" aria-hidden="true"></i></span><span><strong>Domino Adventures</strong><small>Minigame built end to end</small></span>
+                        </button>
+                        <p class="sample-group-label font-mono">MATCH3D PROTOTYPES // 2025</p>
+                        <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="harmony" data-video="assets/img/harmony-endless-horde-reward.mp4" data-poster="assets/img/harmony-endless-horde-reward.jpg" data-title="Endless Horde Reward Screen" data-description="Match3D prototype: end-of-run reward presentation for Endless Horde, including results, earned rewards, and completion feedback.">
+                            <span class="trigger-icon"><i class="fas fa-trophy" aria-hidden="true"></i></span><span><strong>Endless Horde Rewards</strong><small>Results and reward presentation</small></span>
+                        </button>
+                        <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="harmony" data-video="assets/img/match3d-level-reward-sfx.mp4" data-poster="assets/img/match3d-level-reward-sfx.jpg" data-title="Match3D Reward Screen &amp; SFX" data-description="Match3D prototype from 2025: implemented the level-complete reward screen and researched, selected, and integrated SFX." data-orientation="landscape" data-audio="true">
+                            <span class="trigger-icon"><i class="fas fa-cubes" aria-hidden="true"></i></span><span><strong>Match3D Reward Screen</strong><small>Level-complete UI and SFX</small></span>
+                        </button>
+                        <a href="https://harmonygames.co/" target="_blank" rel="noopener noreferrer" class="text-link mt-3">Visit Harmony Games <i class="fas fa-external-link-alt ms-1" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </article>
 
             <!-- JOB 2: KUBIAK LLC (The Enhanced Showcase) -->
             <div class="glass-card p-4 p-lg-5 mb-5">
-                <div class="d-flex justify-content-between align-items-end mb-4 border-bottom border-secondary pb-3">
+                <div class="experience-header">
                     <div>
-                        <h5 class="text-cyan font-mono">03 // PROTOTYPING</h5>
-                        <h3>Kubiak LLC Prototypes</h3>
-                        <p class="mb-0 text-muted font-mono">Focus: Mechanics R&D & Crypto Economies</p>
+                        <h5 class="text-cyan font-mono">03 // PROFESSIONAL EXPERIENCE</h5>
+                        <h3>Mobile Game Developer · Kubiak LLC</h3>
+                        <p class="mb-0 text-muted font-mono">Dec 2020 - Feb 2023 | Remote, USA</p>
                     </div>
-                    <div class="text-end d-none d-md-block">
-                        <span class="badge bg-secondary">Unity</span>
-                        <span class="badge bg-secondary">Physics</span>
+                    <div class="evidence-tags d-none d-md-flex">
+                        <span>Unity</span><span>C#</span><span>Mobile Performance</span>
                     </div>
                 </div>
+                <p class="text-light opacity-75">Developed Unity UI systems, gameplay flows, state machines, and reusable screen-transition frameworks across several game genres.</p>
+                <p class="impact-line"><strong>3 playable prototypes</strong> delivered in six weeks for internal validation.</p>
 
                 <!-- THE NEW SHOWCASE COMPONENT -->
                 <div class="showcase-container" id="kubiak-showcase">
                     <!-- Video Area -->
                     <div class="showcase-viewport">
-                        <video id="kubiak-video" autoplay muted loop playsinline>
-                            <source src="assets/img/DD-M1.mp4" type="video/mp4">
+                        <video id="kubiak-video" class="project-video" muted loop playsinline controls preload="none" aria-label="Kubiak prototype demonstration">
+                            <source data-src="assets/img/DD-M1.mp4" type="video/mp4">
                         </video>
                         <div class="viewport-overlay">
                             <h4 id="kubiak-title">Stable Cleaning</h4>
@@ -196,10 +290,10 @@
                             </div>
                         </div>
                         <!-- Item 4 -->
-                        <div class="mechanic-trigger" onclick="changeShowcase('kubiak', 'assets/img/GG-M1.mp4', 'Crypto Strategy', 'Turn-based economy loop UI implementation.', this)">
+                        <div class="mechanic-trigger" onclick="changeShowcase('kubiak', 'assets/img/lost-realms-strategy-economy.mp4', 'Strategy Economy UI', 'Lost Realms strategy and economy UI implementation.', this, 'assets/img/lost-realms-strategy-economy.jpg')">
                             <div class="trigger-icon"><i class="fas fa-coins"></i></div>
                             <div>
-                                <h5>Crypto Strategy</h5>
+                                <h5>Strategy Economy UI</h5>
                                 <p>UI/UX Economy</p>
                             </div>
                         </div>
@@ -217,19 +311,23 @@
 
             <!-- JOB 3: TREECLOUD (The Enhanced Showcase) -->
             <div class="glass-card p-4 p-lg-5 mb-5">
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <h5 class="text-cyan font-mono">04 // INTERNSSHIP</h5>
-                        <h3>TreeCloud Experiments</h3>
-                        <p class="text-muted font-mono">Focus: (Kinect, LiDAR, Unreal Engine 4)</p>
+                <div class="experience-header">
+                    <div>
+                        <h5 class="text-cyan font-mono">04 // PROFESSIONAL EXPERIENCE</h5>
+                        <h3>Game Developer Intern · TreeCloud Technologies</h3>
+                        <p class="mb-0 text-muted font-mono">Oct 2019 - Jan 2020 | El Salvador</p>
+                    </div>
+                    <div class="evidence-tags d-none d-md-flex">
+                        <span>Unreal Engine 4</span><span>Kinect</span><span>LiDAR</span>
                     </div>
                 </div>
+                <p class="text-light opacity-75">Developed gameplay prototypes, drone-behavior simulations, and LiDAR visualization tools for technical validation and demonstrations.</p>
 
                 <div class="showcase-container" id="treecloud-showcase">
                     <!-- Video Area -->
                     <div class="showcase-viewport">
-                        <video id="treecloud-video" autoplay muted loop playsinline>
-                            <source src="assets/img/TC-M1.mp4" type="video/mp4">
+                        <video id="treecloud-video" class="project-video" muted loop playsinline controls preload="none" aria-label="TreeCloud prototype demonstration">
+                            <source data-src="assets/img/TC-M1.mp4" type="video/mp4">
                         </video>
                         <div class="viewport-overlay">
                             <h4 id="treecloud-title">Kinect Ping Pong</h4>
@@ -275,15 +373,27 @@
                     </div>
                 </div>
             </div>
+            <article class="glass-card compact-experience-card p-4 p-lg-5 mb-5">
+                <div>
+                    <h5 class="text-cyan font-mono">05 // PROFESSIONAL EXPERIENCE</h5>
+                    <h3>Junior Software Developer · OFBOX</h3>
+                    <p class="text-muted font-mono">Oct 2017 - Oct 2019 | El Salvador</p>
+                </div>
+                <ul class="achievement-list mb-0">
+                    <li>Optimized legacy software and resolved production defects to improve performance and stability.</li>
+                    <li>Developed data-extraction and internal integration tools for scalable business workflows.</li>
+                </ul>
+            </article>
+
 
         </div>
     </section>
 
     <!-- DIVIDER -->
-    <div class="divider-section d-flex align-items-center justify-content-center">
+    <div class="divider-section d-flex align-items-center justify-content-center" aria-hidden="true">
         <div class="container position-relative text-end">
-            <h2 class="big-outline-text">PERSONAL</h2>
-            <h2 class="big-filled-text" style="transform: translateX(-40px);">PROJECTS</h2>
+            <h2 class="big-outline-text">ADDITIONAL</h2>
+            <h2 class="big-filled-text divider-text-right">R&amp;D</h2>
         </div>
     </div>
 
@@ -292,10 +402,10 @@
         <div class="container">
             <div class="glass-card p-4">
                 <div class="text-center mb-5">
-                    <h5 class="text-cyan font-mono">05 // personal-projects</h5>
-                    <h3>Unreal Engine R&D</h3>
-                    <p class="text-light opacity-75 mx-auto" style="max-width: 700px;">
-                        Technical exploration into the Animation Pipeline. Mapping complex humanoid rigs (Paragon characters) to standard fighting animations and testing environmental interactions.
+                    <h5 class="text-cyan font-mono">06 // PERSONAL EXPLORATION</h5>
+                    <h3>Unreal Engine Animation R&amp;D</h3>
+                    <p class="text-light opacity-75 mx-auto project-intro">
+                        Complementary exploration beyond my primary Unity specialization: animation retargeting, runtime character swaps, and VFX-driven state feedback.
                     </p>
                 </div>
 
@@ -304,8 +414,8 @@
                     <div class="col-md-4">
                         <div class="glass-card p-2 h-100 border-0 bg-transparent">
                             <div class="ratio ratio-16x9 mb-3 border border-secondary rounded overflow-hidden">
-                                <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()">
-                                    <source src="assets/img/PP-M1.mp4" type="video/mp4">
+                                <video class="project-video" muted loop playsinline controls preload="none" aria-label="Animation retargeting demonstration">
+                                    <source data-src="assets/img/PP-M1.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <h5 class="text-center text-cyan">Animation Retargeting</h5>
@@ -315,8 +425,8 @@
                     <div class="col-md-4">
                         <div class="glass-card p-2 h-100 border-0 bg-transparent">
                             <div class="ratio ratio-16x9 mb-3 border border-secondary rounded overflow-hidden">
-                                <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()">
-                                    <source src="assets/img/PP-M2.mp4" type="video/mp4">
+                                <video class="project-video" muted loop playsinline controls preload="none" aria-label="Runtime character swap demonstration">
+                                    <source data-src="assets/img/PP-M2.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <h5 class="text-center text-cyan">Character Swap</h5>
@@ -326,8 +436,8 @@
                     <div class="col-md-4">
                         <div class="glass-card p-2 h-100 border-0 bg-transparent">
                             <div class="ratio ratio-16x9 mb-3 border border-secondary rounded overflow-hidden">
-                                <video autoplay muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()">
-                                    <source src="assets/img/PP-M3.mp4" type="video/mp4">
+                                <video class="project-video" muted loop playsinline controls preload="none" aria-label="VFX state machine demonstration">
+                                    <source data-src="assets/img/PP-M3.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <h5 class="text-center text-cyan">VFX State Machines</h5>
@@ -338,20 +448,43 @@
             </div>
         </div>
     </section>
+        <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="contact-card">
+                    <h5 class="text-cyan font-mono">07 // CONTACT</h5>
+                    <h2 id="contact-heading">Let's build clear, responsive player experiences.</h2>
+                    <p>I am happy to discuss Unity UI, gameplay systems, mobile production, and remote collaboration.</p>
+                    <div class="email-contact" aria-label="Email contact">
+                        <span class="email-label font-mono">DIRECT EMAIL</span>
+                        <a href="mailto:gardo93g@gmail.com" class="email-address">gardo93g@gmail.com</a>
+                        <p>Open your email app or copy the address to contact me directly.</p>
+                        <div class="email-actions">
+                            <a href="mailto:gardo93g@gmail.com" class="btn-custom btn-custom-filled"><i class="fas fa-envelope" aria-hidden="true"></i> Write an email</a>
+                            <button type="button" class="btn-custom copy-email-button" data-copy-email="gardo93g@gmail.com"><i class="fas fa-copy" aria-hidden="true"></i> Copy email</button>
+                        </div>
+                        <p class="copy-status font-mono" data-copy-status aria-live="polite"></p>
+                    </div>
+                    <div class="contact-actions contact-secondary-actions">
+                        <a href="https://www.linkedin.com/in/edgardo-g-930568143" target="_blank" rel="noopener noreferrer" class="btn-custom">LinkedIn</a>
+                        <a href="https://github.com/gardo93g" target="_blank" rel="noopener noreferrer" class="text-link">GitHub <i class="fas fa-external-link-alt ms-1" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer py-5 text-center">
         <div class="container">
             <div class="social-links mb-4">
-                <a href="https://github.com/gardo93g" target="_blank" aria-label="Github"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/edgardo-g-930568143" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:gardo93g@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/gardo93g" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/edgardo-g-930568143" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="mailto:gardo93g@gmail.com" aria-label="Email Edgardo Galdamez"><i class="fas fa-envelope" aria-hidden="true"></i></a>
             </div>
-            <p class="text-muted font-mono small mb-0">&copy; 2025 Edgardo Galdamez.</p>
+            <p class="text-muted font-mono small mb-0">&copy; <span data-current-year>2026</span> Edgardo Galdamez.</p>
         </div>
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
