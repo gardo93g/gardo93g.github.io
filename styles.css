@@ -1023,6 +1023,192 @@ summary:focus-visible {
     border-bottom: 1px solid var(--line);
 }
 
+.blender-lab-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.blender-lab-card {
+    position: relative;
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    background:
+        linear-gradient(135deg, rgba(var(--cyan-rgb), 0.055), transparent 38%),
+        var(--bg-panel);
+}
+
+.blender-lab-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    content: '';
+    background: linear-gradient(90deg, var(--cyan), var(--violet), transparent 80%);
+}
+
+.blender-lab-card-motion {
+    background:
+        linear-gradient(135deg, rgba(var(--violet-rgb), 0.06), transparent 38%),
+        var(--bg-panel);
+}
+
+.lab-card-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 0.8rem;
+}
+
+.lab-card-heading h3 {
+    margin: 0.25rem 0 0;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
+.lab-number {
+    color: var(--cyan);
+    font-size: 0.62rem;
+    letter-spacing: 0.09em;
+}
+
+.lab-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.lab-tags span {
+    padding: 0.35rem 0.55rem;
+    color: var(--text-muted);
+    border: 1px solid var(--line);
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 0.56rem;
+    letter-spacing: 0.06em;
+}
+
+.lab-summary {
+    max-width: 820px;
+    margin-bottom: 1.4rem;
+    color: var(--text-muted);
+}
+
+.lab-image-pair,
+.lab-video-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.lab-media {
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #030507;
+}
+
+.lab-media img {
+    width: 100%;
+    height: auto;
+}
+
+.lab-media video {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+}
+
+.lab-media figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2.4rem 0.75rem 0.55rem;
+    color: var(--text-soft);
+    background: linear-gradient(to top, rgba(3, 5, 7, 0.94), transparent);
+    font-size: 0.56rem;
+    letter-spacing: 0.06em;
+    pointer-events: none;
+}
+
+.vr-lab-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    margin-top: 1.25rem;
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    background:
+        linear-gradient(135deg, rgba(var(--lime-rgb), 0.055), transparent 42%),
+        var(--bg-panel);
+}
+
+.vr-lab-media {
+    position: relative;
+    min-width: 0;
+    background: #030507;
+}
+
+.vr-lab-media video {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+.vr-duration {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.4rem 0.55rem;
+    color: var(--bg);
+    background: var(--lime);
+    font-size: 0.56rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    pointer-events: none;
+}
+
+.vr-lab-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-left: 1px solid var(--line);
+}
+
+.vr-lab-copy h3 {
+    margin: 0.35rem 0 0.75rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
+.vr-lab-copy p {
+    margin-bottom: 1.4rem;
+    color: var(--text-muted);
+}
+
+.vr-lab-copy .lab-tags {
+    justify-content: flex-start;
+}
+.earlier-research-heading {
+    margin: clamp(3.5rem, 7vw, 6rem) 0 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+}
+
+.earlier-research-heading span {
+    color: var(--violet);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+}
+
+.earlier-research-heading h3 {
+    margin: 0.3rem 0 0;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
 .research-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1513,7 +1699,37 @@ summary:focus-visible {
     .research-card:last-child {
         grid-column: auto;
     }
+    .lab-card-heading {
+        display: block;
+    }
 
+    .lab-tags {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+
+    .lab-image-pair,
+    .lab-video-pair {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-media video {
+        aspect-ratio: 16 / 8.5;
+    }
+
+    .vr-lab-card {
+        grid-template-columns: 1fr;
+    }
+
+    .vr-lab-media video {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+    }
+
+    .vr-lab-copy {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+    }
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
