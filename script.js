@@ -41,16 +41,29 @@
             section_01_title: 'Production Work at Harmony Games.',
             section_01_subtitle: 'LiveOps architectures, dynamic progression maps, responsive menus, DOTween feedback sequences, and integrated audio systems.',
             filter_label: 'FILTER BY:',
-            filter_all: 'ALL WORK',
+            filter_all: 'ALL PRODUCTION',
             filter_liveops: 'LIVEOPS & UI',
             filter_gameplay: 'GAMEPLAY & MOTION',
-            filter_rnd: 'R&D · BLENDER · VR',
+            filter_rnd: 'R&D · BLENDER · VR ↓',
             case01_card_title: 'LiveOps & Progression',
             case01_card_sub: 'Systems / Player Flow',
             case02_card_title: 'Gameplay Feedback',
             case02_card_sub: 'Motion / Interaction',
             case03_card_title: 'Tile Motion & VFX',
             case03_card_sub: 'DOTween / Game Feel',
+            case04_card_title: 'Domino Adventures',
+            case04_card_sub: 'Full Minigame Loop',
+            case05_card_title: 'Endless Horde',
+            case05_card_sub: 'Reward Tally Flow',
+            case06_card_title: 'Match3D Rewards',
+            case06_card_sub: 'UI + Integrated SFX',
+            now_playing_badge: 'NOW PLAYING',
+            hud_fps_label: 'TARGET FPS',
+            hud_fps_val: '60 FPS SOLID',
+            hud_gc_label: 'GC SPIKES',
+            hud_gc_val: '0 KB / ALLOC',
+            hud_pipe_label: 'PIPELINE',
+            hud_pipe_val: 'ADDRESSABLES',
             btn_expand_theater: 'EXPAND THEATER',
             case_company_eyebrow: 'HARMONY GAMES · PRODUCTION',
             badge_shipped: 'SHIPPED TITLE',
@@ -59,14 +72,6 @@
             fact_built_with: 'BUILT WITH',
             btn_deep_dive: 'Technical Deep-Dive',
             btn_visit_harmony: 'Visit Harmony Games',
-            sample_rail_heading: 'MORE MODULES FROM HARMONY GAMES',
-            sample_rail_hint: 'SELECT TO LOAD PREVIEW',
-            rail_sample_1_title: 'Domino Adventures',
-            rail_sample_1_sub: 'Full minigame loop',
-            rail_sample_2_title: 'Endless Horde',
-            rail_sample_2_sub: 'Reward tally flow',
-            rail_sample_3_title: 'Match3D Rewards',
-            rail_sample_3_sub: 'UI + Integrated SFX',
             section_02_index: '02 // CAREER TIMELINE',
             section_02_title: 'Experience & Track Record.',
             section_02_subtitle: '5+ years collaborating with international and US-based teams on mobile game production, rapid prototyping, and software engineering.',
@@ -151,6 +156,7 @@
             modal_block_03: 'KEY TECHNICAL RESULTS',
             modal_block_04: 'APPLIED TECHNOLOGIES',
             btn_close_breakdown: 'CLOSE BREAKDOWN',
+            slider_instruction: 'DRAG TO COMPARE MESH PIPELINE',
             toast_copied: 'Email copied to clipboard: ',
             toast_copy_error: 'Could not copy automatically. Email: '
         },
@@ -181,16 +187,29 @@
             section_01_title: 'Trabajo de Producción en Harmony Games.',
             section_01_subtitle: 'Arquitecturas LiveOps, mapas de progresión dinámicos, menús responsivos, secuencias de feedback con DOTween y sistemas de audio integrados.',
             filter_label: 'FILTRAR POR:',
-            filter_all: 'TODOS',
+            filter_all: 'PRODUCCIÓN',
             filter_liveops: 'LIVEOPS Y UI',
             filter_gameplay: 'GAMEPLAY Y ANIMACIÓN',
-            filter_rnd: 'I+D · BLENDER · VR',
+            filter_rnd: 'I+D · BLENDER · VR ↓',
             case01_card_title: 'LiveOps y Progresión',
             case01_card_sub: 'Sistemas / Flujo de Jugador',
             case02_card_title: 'Feedback de Gameplay',
             case02_card_sub: 'Animación / Interacción',
             case03_card_title: 'Movimiento y VFX',
             case03_card_sub: 'DOTween / Game Feel',
+            case04_card_title: 'Domino Adventures',
+            case04_card_sub: 'Bucle de Minijuego',
+            case05_card_title: 'Endless Horde',
+            case05_card_sub: 'Flujo de Recompensas',
+            case06_card_title: 'Match3D Rewards',
+            case06_card_sub: 'UI + Audio Integrado',
+            now_playing_badge: 'EN VIVO',
+            hud_fps_label: 'FPS OBJETIVO',
+            hud_fps_val: '60 FPS ESTABLE',
+            hud_gc_label: 'PICOS DE GC',
+            hud_gc_val: '0 KB / ASIGNACIÓN',
+            hud_pipe_label: 'PIPELINE',
+            hud_pipe_val: 'ADDRESSABLES',
             btn_expand_theater: 'PANTALLA COMPLETA',
             case_company_eyebrow: 'HARMONY GAMES · PRODUCCIÓN',
             badge_shipped: 'TÍTULO PUBLICADO',
@@ -199,14 +218,6 @@
             fact_built_with: 'TECNOLOGÍAS',
             btn_deep_dive: 'Ficha Técnica',
             btn_visit_harmony: 'Visitar Harmony Games',
-            sample_rail_heading: 'MÁS MÓDULOS EN HARMONY GAMES',
-            sample_rail_hint: 'SELECCIONA PARA PREVISUALIZAR',
-            rail_sample_1_title: 'Domino Adventures',
-            rail_sample_1_sub: 'Minijuego completo',
-            rail_sample_2_title: 'Endless Horde',
-            rail_sample_2_sub: 'Recompensas y conteo',
-            rail_sample_3_title: 'Match3D Rewards',
-            rail_sample_3_sub: 'UI + Audio integrado',
             section_02_index: '02 // TRAYECTORIA PROFESIONAL',
             section_02_title: 'Experiencia y Trayectoria.',
             section_02_subtitle: 'Más de 5 años colaborando con equipos internacionales y de EE.UU. en producción de juegos móviles, prototipado rápido e ingeniería de software.',
@@ -291,6 +302,7 @@
             modal_block_03: 'RESULTADOS TÉCNICOS CLAVE',
             modal_block_04: 'TECNOLOGÍAS APLICADAS',
             btn_close_breakdown: 'CERRAR FICHA',
+            slider_instruction: 'ARRASTRA PARA COMPARAR MALLAS',
             toast_copied: 'Correo copiado al portapapeles: ',
             toast_copy_error: 'No se pudo copiar automáticamente. Correo: '
         }
@@ -703,13 +715,12 @@
     // ==========================================================================
     // Category Filter Chips Controller
     // ==========================================================================
-    const filterChips = document.querySelectorAll('.filter-chip');
+    const filterChips = document.querySelectorAll('.filter-bar button.filter-chip');
     const caseCards = document.querySelectorAll('.case-picker .case-card');
-    const sampleCards = document.querySelectorAll('.sample-rail .sample-card');
 
     filterChips.forEach((chip) => {
         chip.addEventListener('click', () => {
-            const filter = chip.dataset.filter;
+            const filter = chip.dataset.filter || 'all';
 
             filterChips.forEach((c) => {
                 const isActive = c === chip;
@@ -717,7 +728,7 @@
                 c.setAttribute('aria-pressed', String(isActive));
             });
 
-            // Filter main case cards
+            // Filter all 6 case cards in the unified deck
             let firstVisibleCard = null;
             caseCards.forEach((card) => {
                 const category = card.dataset.category || 'all';
@@ -728,14 +739,7 @@
                 }
             });
 
-            // Filter sample cards
-            sampleCards.forEach((card) => {
-                const category = card.dataset.category || 'all';
-                const match = filter === 'all' || category === filter;
-                card.style.display = match ? '' : 'none';
-            });
-
-            // If current active card is hidden, switch to first visible
+            // If current active card is hidden, switch stage to first visible card
             const currentCard = document.querySelector('.case-picker .case-card.active');
             if (currentCard && currentCard.style.display === 'none' && firstVisibleCard) {
                 updateFeaturedCase(firstVisibleCard);
@@ -1060,6 +1064,85 @@
         sections.forEach((section) => sectionObserver.observe(section));
     }
 
+    // ==========================================================================
+    // Scroll Reading Progress Bar
+    // ==========================================================================
+    const scrollProgressBar = document.getElementById('scrollProgressBar');
+    function updateScrollProgress() {
+        if (!scrollProgressBar) return;
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = totalHeight > 0 ? Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100)) : 0;
+        scrollProgressBar.style.width = progress + '%';
+    }
+
+    // ==========================================================================
+    // Interactive Cursor Spotlight for Cards
+    // ==========================================================================
+    const spotlightCards = Array.from(document.querySelectorAll('.spotlight-card'));
+    spotlightCards.forEach((card) => {
+        card.addEventListener('pointermove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
+    // ==========================================================================
+    // Interactive Mesh Comparison Slider (Blender R&D)
+    // ==========================================================================
+    const meshSlider = document.getElementById('meshComparisonSlider');
+    if (meshSlider) {
+        let isDragging = false;
+        let currentPos = 50;
+
+        function updateSlider(clientX) {
+            const rect = meshSlider.getBoundingClientRect();
+            const offset = clientX - rect.left;
+            let pct = (offset / rect.width) * 100;
+            pct = Math.max(2, Math.min(98, pct));
+            currentPos = pct;
+            meshSlider.style.setProperty('--slider-pos', `${pct.toFixed(2)}%`);
+        }
+
+        meshSlider.addEventListener('pointerdown', (e) => {
+            isDragging = true;
+            meshSlider.classList.add('is-interacting');
+            try { meshSlider.setPointerCapture(e.pointerId); } catch (_) {}
+            updateSlider(e.clientX);
+        });
+
+        meshSlider.addEventListener('pointermove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        const stopDragging = (e) => {
+            if (isDragging) {
+                isDragging = false;
+                try { meshSlider.releasePointerCapture(e.pointerId); } catch (_) {}
+            }
+        };
+
+        meshSlider.addEventListener('pointerup', stopDragging);
+        meshSlider.addEventListener('pointercancel', stopDragging);
+
+        meshSlider.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                currentPos = Math.max(2, currentPos - 4);
+                meshSlider.classList.add('is-interacting');
+                meshSlider.style.setProperty('--slider-pos', `${currentPos.toFixed(2)}%`);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                currentPos = Math.min(98, currentPos + 4);
+                meshSlider.classList.add('is-interacting');
+                meshSlider.style.setProperty('--slider-pos', `${currentPos.toFixed(2)}%`);
+            }
+        });
+    }
+
     // Set Dynamic Year
     document.querySelectorAll('[data-current-year]').forEach((element) => {
         element.textContent = String(new Date().getFullYear());
@@ -1072,5 +1155,9 @@
     setLanguage(initialLang);
 
     updateNavbar();
-    window.addEventListener('scroll', updateNavbar, { passive: true });
+    updateScrollProgress();
+    window.addEventListener('scroll', () => {
+        updateNavbar();
+        updateScrollProgress();
+    }, { passive: true });
 })();

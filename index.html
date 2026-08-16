@@ -52,6 +52,7 @@
     </script>
 </head>
 <body id="page-top">
+    <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
     <a class="skip-link" href="#main-content" data-i18n="skip_link">Skip to main content</a>
 
     <!-- Navigation -->
@@ -181,27 +182,27 @@
                     <span class="filter-label font-mono" data-i18n="filter_label">FILTER BY:</span>
                     <div class="filter-group">
                         <button type="button" class="filter-chip active font-mono" data-filter="all" aria-pressed="true">
-                            <span data-i18n="filter_all">ALL WORK</span>
-                            <span class="filter-count">12</span>
+                            <span data-i18n="filter_all">ALL PRODUCTION</span>
+                            <span class="filter-count">6</span>
                         </button>
                         <button type="button" class="filter-chip font-mono" data-filter="liveops" aria-pressed="false">
                             <span data-i18n="filter_liveops">LIVEOPS &amp; UI</span>
-                            <span class="filter-count">5</span>
+                            <span class="filter-count">3</span>
                         </button>
                         <button type="button" class="filter-chip font-mono" data-filter="gameplay" aria-pressed="false">
                             <span data-i18n="filter_gameplay">GAMEPLAY &amp; MOTION</span>
-                            <span class="filter-count">4</span>
-                        </button>
-                        <button type="button" class="filter-chip font-mono" data-filter="rnd" aria-pressed="false">
-                            <span data-i18n="filter_rnd">R&amp;D · BLENDER · VR</span>
                             <span class="filter-count">3</span>
                         </button>
+                        <a href="#personal-projects" class="filter-chip filter-chip-jump font-mono">
+                            <span data-i18n="filter_rnd">R&amp;D · BLENDER · VR ↓</span>
+                            <span class="filter-count">3</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Featured Case Selector Cards -->
-                <div class="case-picker" aria-label="Choose a featured production case">
-                    <button type="button" class="case-card case-card-cyan active" aria-pressed="true" data-case-trigger
+                <!-- Unified 6-Case Selector Deck -->
+                <div class="case-picker case-picker-grid" aria-label="Choose a production module">
+                    <button type="button" class="case-card spotlight-card case-card-cyan active" aria-pressed="true" data-case-trigger
                         data-case-id="harmony-liveops"
                         data-category="liveops"
                         data-video="assets/img/harmony-liveops-flow.mp4" 
@@ -213,14 +214,17 @@
                         data-stack="Unity · C# · Firebase · Addressables · DOTween">
                         <img src="assets/img/harmony-liveops-flow.jpg" alt="Domino Delights LiveOps progression interface" width="430" height="888" loading="lazy">
                         <span class="case-card-shade" aria-hidden="true"></span>
-                        <span class="case-number font-mono">CASE 01</span>
+                        <div class="case-card-topbar font-mono">
+                            <span class="case-number">CASE 01</span>
+                            <span class="case-live-indicator"><span class="pulse-dot"></span><span class="indicator-text" data-i18n="now_playing_badge">NOW PLAYING</span></span>
+                        </div>
                         <span class="case-card-copy">
                             <strong data-i18n="case01_card_title">LiveOps &amp; Progression</strong>
                             <small data-i18n="case01_card_sub">Systems / Player Flow</small>
                         </span>
                     </button>
 
-                    <button type="button" class="case-card case-card-violet" aria-pressed="false" data-case-trigger
+                    <button type="button" class="case-card spotlight-card case-card-violet" aria-pressed="false" data-case-trigger
                         data-case-id="harmony-tile"
                         data-category="gameplay"
                         data-video="assets/img/harmony-tile-animations.mp4" 
@@ -232,14 +236,17 @@
                         data-stack="Unity · C# · DOTween · uGUI · Particle FX">
                         <img src="assets/img/harmony-tile-animations.jpg" alt="Domino tile interaction and animation" width="430" height="888" loading="lazy">
                         <span class="case-card-shade" aria-hidden="true"></span>
-                        <span class="case-number font-mono">CASE 02</span>
+                        <div class="case-card-topbar font-mono">
+                            <span class="case-number">CASE 02</span>
+                            <span class="case-live-indicator"><span class="pulse-dot"></span><span class="indicator-text" data-i18n="now_playing_badge">NOW PLAYING</span></span>
+                        </div>
                         <span class="case-card-copy">
                             <strong data-i18n="case02_card_title">Gameplay Feedback</strong>
                             <small data-i18n="case02_card_sub">Motion / Interaction</small>
                         </span>
                     </button>
 
-                    <button type="button" class="case-card case-card-lime" aria-pressed="false" data-case-trigger
+                    <button type="button" class="case-card spotlight-card case-card-lime" aria-pressed="false" data-case-trigger
                         data-case-id="harmony-streak"
                         data-category="gameplay"
                         data-video="assets/img/harmony-streak-reward-vfx.mp4" 
@@ -251,20 +258,97 @@
                         data-stack="Unity · C# · DOTween · VFX · Custom Shaders">
                         <img src="assets/img/harmony-streak-reward-vfx.jpg" alt="Streak reward animation and visual effects" width="430" height="888" loading="lazy">
                         <span class="case-card-shade" aria-hidden="true"></span>
-                        <span class="case-number font-mono">CASE 03</span>
+                        <div class="case-card-topbar font-mono">
+                            <span class="case-number">CASE 03</span>
+                            <span class="case-live-indicator"><span class="pulse-dot"></span><span class="indicator-text" data-i18n="now_playing_badge">NOW PLAYING</span></span>
+                        </div>
                         <span class="case-card-copy">
                             <strong data-i18n="case03_card_title">Tile Motion &amp; VFX</strong>
                             <small data-i18n="case03_card_sub">DOTween / Game Feel</small>
                         </span>
                     </button>
+
+                    <button type="button" class="case-card spotlight-card case-card-cyan" aria-pressed="false" data-case-trigger
+                        data-case-id="harmony-domino-adventures"
+                        data-category="gameplay"
+                        data-video="assets/img/harmony-domino-adventures-minigame.mp4" 
+                        data-poster="assets/img/harmony-domino-adventures-minigame.jpg"
+                        data-title="Domino Adventures Minigame" 
+                        data-description="Built this entire standalone minigame loop from first prototype through production polish: rules, board state, UI, and reward payouts."
+                        data-role="Full Minigame Architecture" 
+                        data-focus="Minigame Loop, uGUI Architecture, Balance Tuning" 
+                        data-stack="Unity · C# · ScriptableObjects · DOTween">
+                        <img src="assets/img/harmony-domino-adventures-minigame.jpg" alt="Domino Adventures standalone minigame" width="430" height="888" loading="lazy">
+                        <span class="case-card-shade" aria-hidden="true"></span>
+                        <div class="case-card-topbar font-mono">
+                            <span class="case-number">CASE 04</span>
+                            <span class="case-live-indicator"><span class="pulse-dot"></span><span class="indicator-text" data-i18n="now_playing_badge">NOW PLAYING</span></span>
+                        </div>
+                        <span class="case-card-copy">
+                            <strong data-i18n="case04_card_title">Domino Adventures</strong>
+                            <small data-i18n="case04_card_sub">Full Minigame Loop</small>
+                        </span>
+                    </button>
+
+                    <button type="button" class="case-card spotlight-card case-card-violet" aria-pressed="false" data-case-trigger
+                        data-case-id="harmony-endless-horde"
+                        data-category="liveops"
+                        data-video="assets/img/harmony-endless-horde-reward.mp4" 
+                        data-poster="assets/img/harmony-endless-horde-reward.jpg"
+                        data-title="Endless Horde Reward Screen" 
+                        data-description="Built dynamic end-of-run reward screen with tally counters, currency animations, level-up feedback, and back-to-menu routing."
+                        data-role="Reward Screen &amp; Tally Systems" 
+                        data-focus="Async Tally Choreography, Audio Sync, Memory Pooling" 
+                        data-stack="Unity · C# · DOTween · uGUI">
+                        <img src="assets/img/harmony-endless-horde-reward.jpg" alt="Endless Horde results and reward screen" width="430" height="888" loading="lazy">
+                        <span class="case-card-shade" aria-hidden="true"></span>
+                        <div class="case-card-topbar font-mono">
+                            <span class="case-number">CASE 05</span>
+                            <span class="case-live-indicator"><span class="pulse-dot"></span><span class="indicator-text" data-i18n="now_playing_badge">NOW PLAYING</span></span>
+                        </div>
+                        <span class="case-card-copy">
+                            <strong data-i18n="case05_card_title">Endless Horde</strong>
+                            <small data-i18n="case05_card_sub">Reward Tally Flow</small>
+                        </span>
+                    </button>
+
+                    <button type="button" class="case-card spotlight-card case-card-lime" aria-pressed="false" data-case-trigger 
+                        data-case-id="match3d-rewards"
+                        data-category="liveops"
+                        data-orientation="landscape" 
+                        data-audio="true"
+                        data-video="assets/img/match3d-level-reward-sfx.mp4" 
+                        data-poster="assets/img/match3d-level-reward-sfx.jpg"
+                        data-title="Match3D Reward Screen &amp; SFX" 
+                        data-description="Engineered the level-complete reward popup, score calculation animation, sound effect curation, and audio bus integration."
+                        data-role="UI Engineering &amp; Audio Bus" 
+                        data-focus="Completion Flow, Audio Spatialization, UX Clarity" 
+                        data-stack="Unity · C# · SFX Integration · DOTween">
+                        <img src="assets/img/match3d-level-reward-sfx.jpg" alt="Match3D level reward screen" width="1904" height="984" loading="lazy">
+                        <span class="case-card-shade" aria-hidden="true"></span>
+                        <div class="case-card-topbar font-mono">
+                            <span class="case-number">CASE 06</span>
+                            <span class="case-live-indicator"><span class="pulse-dot"></span><span class="indicator-text" data-i18n="now_playing_badge">NOW PLAYING</span></span>
+                        </div>
+                        <span class="case-card-copy">
+                            <strong data-i18n="case06_card_title">Match3D Rewards</strong>
+                            <small data-i18n="case06_card_sub">UI + Integrated SFX</small>
+                        </span>
+                    </button>
                 </div>
 
-                <!-- Active Case Stage -->
+                <!-- Active Production Viewport & Engineering Console Stage -->
                 <article class="case-stage" id="featured-case-stage">
-                    <div class="case-video-frame">
-                        <video id="featured-case-video" class="project-video" muted loop playsinline controls preload="none" poster="assets/img/harmony-liveops-flow.jpg" aria-label="Selected Harmony Games work sample">
-                            <source data-src="assets/img/harmony-liveops-flow.mp4" type="video/mp4">
-                        </video>
+                    <div class="device-mockup-frame">
+                        <div class="device-bezel">
+                            <div class="device-island"></div>
+                            <div class="device-screen">
+                                <video id="featured-case-video" class="project-video" muted loop playsinline controls preload="none" poster="assets/img/harmony-liveops-flow.jpg" aria-label="Selected Harmony Games work sample">
+                                    <source data-src="assets/img/harmony-liveops-flow.mp4" type="video/mp4">
+                                </video>
+                                <div class="device-glass-glare" aria-hidden="true"></div>
+                            </div>
+                        </div>
                         <div class="video-controls-overlay">
                             <button type="button" class="theater-trigger font-mono" id="openTheaterBtn" aria-label="Expand video in theater mode" title="Open in Theater Mode">
                                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -281,6 +365,22 @@
                         <h3 id="featured-case-title">LiveOps &amp; Progression Flow</h3>
                         <p id="featured-case-description">Engineered progression maps, event entry points, boosters, multi-tier reward sequences, and decoupled player flow state machines.</p>
                         
+                        <!-- Real-time Production HUD Readout -->
+                        <div class="case-hud-grid font-mono">
+                            <div class="hud-stat">
+                                <span class="hud-label" data-i18n="hud_fps_label">TARGET FPS</span>
+                                <strong class="hud-val" data-i18n="hud_fps_val">60 FPS SOLID</strong>
+                            </div>
+                            <div class="hud-stat">
+                                <span class="hud-label" data-i18n="hud_gc_label">GC SPIKES</span>
+                                <strong class="hud-val" data-i18n="hud_gc_val">0 KB / ALLOC</strong>
+                            </div>
+                            <div class="hud-stat">
+                                <span class="hud-label" data-i18n="hud_pipe_label">PIPELINE</span>
+                                <strong class="hud-val" data-i18n="hud_pipe_val">ADDRESSABLES</strong>
+                            </div>
+                        </div>
+
                         <dl class="case-facts">
                             <div>
                                 <dt class="font-mono" data-i18n="fact_my_part">MY PART</dt>
@@ -308,66 +408,6 @@
                         </div>
                     </div>
                 </article>
-
-                <!-- Additional Production Samples Rail -->
-                <div class="sample-rail-heading">
-                    <p class="font-mono" data-i18n="sample_rail_heading">MORE MODULES FROM HARMONY GAMES</p>
-                    <span class="font-mono" data-i18n="sample_rail_hint">SELECT TO LOAD PREVIEW</span>
-                </div>
-                <div class="sample-rail" aria-label="More production work samples">
-                    <button type="button" class="sample-card" aria-pressed="false" data-case-trigger
-                        data-case-id="harmony-domino-adventures"
-                        data-category="gameplay"
-                        data-video="assets/img/harmony-domino-adventures-minigame.mp4" 
-                        data-poster="assets/img/harmony-domino-adventures-minigame.jpg"
-                        data-title="Domino Adventures Minigame" 
-                        data-description="Built this entire standalone minigame loop from first prototype through production polish: rules, board state, UI, and reward payouts."
-                        data-role="Full Minigame Architecture" 
-                        data-focus="Minigame Loop, uGUI Architecture, Balance Tuning" 
-                        data-stack="Unity · C# · ScriptableObjects · DOTween">
-                        <img src="assets/img/harmony-domino-adventures-minigame.jpg" alt="Domino Adventures minigame" width="430" height="888" loading="lazy">
-                        <span>
-                            <strong data-i18n="rail_sample_1_title">Domino Adventures</strong>
-                            <small data-i18n="rail_sample_1_sub">Full minigame loop</small>
-                        </span>
-                    </button>
-
-                    <button type="button" class="sample-card" aria-pressed="false" data-case-trigger
-                        data-case-id="harmony-endless-horde"
-                        data-category="liveops"
-                        data-video="assets/img/harmony-endless-horde-reward.mp4" 
-                        data-poster="assets/img/harmony-endless-horde-reward.jpg"
-                        data-title="Endless Horde Reward Screen" 
-                        data-description="Built dynamic end-of-run reward screen with tally counters, currency animations, level-up feedback, and back-to-menu routing."
-                        data-role="Reward Screen &amp; Tally Systems" 
-                        data-focus="Async Tally Choreography, Audio Sync, Memory Pooling" 
-                        data-stack="Unity · C# · DOTween · uGUI">
-                        <img src="assets/img/harmony-endless-horde-reward.jpg" alt="Endless Horde results and reward screen" width="430" height="888" loading="lazy">
-                        <span>
-                            <strong data-i18n="rail_sample_2_title">Endless Horde</strong>
-                            <small data-i18n="rail_sample_2_sub">Reward tally flow</small>
-                        </span>
-                    </button>
-
-                    <button type="button" class="sample-card" aria-pressed="false" data-case-trigger 
-                        data-case-id="match3d-rewards"
-                        data-category="liveops"
-                        data-orientation="landscape" 
-                        data-audio="true"
-                        data-video="assets/img/match3d-level-reward-sfx.mp4" 
-                        data-poster="assets/img/match3d-level-reward-sfx.jpg"
-                        data-title="Match3D Reward Screen &amp; SFX" 
-                        data-description="Engineered the level-complete reward popup, score calculation animation, sound effect curation, and audio bus integration."
-                        data-role="UI Engineering &amp; Audio Bus" 
-                        data-focus="Completion Flow, Audio Spatialization, UX Clarity" 
-                        data-stack="Unity · C# · SFX Integration · DOTween">
-                        <img src="assets/img/match3d-level-reward-sfx.jpg" alt="Match3D level reward screen" width="1904" height="984" loading="lazy">
-                        <span>
-                            <strong data-i18n="rail_sample_3_title">Match3D Rewards</strong>
-                            <small data-i18n="rail_sample_3_sub">UI + Integrated SFX</small>
-                        </span>
-                    </button>
-                </div>
             </div>
         </section>
 
@@ -582,7 +622,7 @@
                 </div>
 
                 <div class="blender-lab-grid">
-                    <article class="blender-lab-card blender-lab-card-character">
+                    <article class="blender-lab-card spotlight-card blender-lab-card-character">
                         <div class="lab-card-heading">
                             <div>
                                 <span class="font-mono lab-number">EXPERIMENT 01</span>
@@ -596,19 +636,32 @@
                             </div>
                         </div>
                         <p class="lab-summary" data-i18n="lab_exp1_desc">Using Blender via Model Context Protocol (MCP) to automate iteration from high-poly character sculpts to clean, animation-ready quad topology and stylized shader setups.</p>
-                        <div class="lab-image-pair">
-                            <figure class="lab-media lab-media-primary">
-                                <img src="assets/img/blender-mcp-retopology.png" width="1493" height="643" loading="lazy" alt="Blender comparison showing a dense character mesh beside a clean retopologized mesh">
-                                <figcaption class="font-mono" data-i18n="lab_fig_1">DENSE MESH → CLEAN TOPOLOGY</figcaption>
-                            </figure>
-                            <figure class="lab-media">
-                                <img src="assets/img/blender-character-reference.png" width="1904" height="836" loading="lazy" alt="Character reference and visual development studies used for the Blender experiment">
-                                <figcaption class="font-mono" data-i18n="lab_fig_2">LOOK DEVELOPMENT STUDY</figcaption>
-                            </figure>
+                        
+                        <!-- Interactive Mesh Comparison Slider -->
+                        <div class="mesh-comparison-slider" id="meshComparisonSlider" tabindex="0" role="region" aria-label="Interactive mesh comparison slider">
+                            <div class="comparison-layer comparison-base">
+                                <img src="assets/img/blender-character-reference.png" width="1904" height="836" loading="lazy" alt="Character visual development study">
+                                <span class="comparison-badge font-mono" data-i18n="lab_fig_2">LOOK DEVELOPMENT STUDY</span>
+                            </div>
+                            <div class="comparison-layer comparison-overlay" id="comparisonOverlay">
+                                <img src="assets/img/blender-mcp-retopology.png" width="1904" height="836" loading="lazy" alt="Blender comparison showing a dense character mesh beside a clean retopologized mesh">
+                                <span class="comparison-badge font-mono" data-i18n="lab_fig_1">DENSE MESH → CLEAN TOPOLOGY</span>
+                            </div>
+                            <div class="comparison-divider" id="comparisonDivider" aria-hidden="true">
+                                <div class="divider-line"></div>
+                                <div class="divider-knob">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                                </div>
+                                <div class="divider-line"></div>
+                            </div>
+                            <div class="comparison-hint font-mono" aria-hidden="true">
+                                <span data-i18n="slider_instruction">DRAG TO COMPARE MESH PIPELINE</span>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="blender-lab-card blender-lab-card-motion">
+                    <article class="blender-lab-card spotlight-card blender-lab-card-motion">
                         <div class="lab-card-heading">
                             <div>
                                 <span class="font-mono lab-number">EXPERIMENT 02</span>
@@ -639,7 +692,7 @@
                 </div>
 
                 <!-- VR Lab Showcase -->
-                <article class="vr-lab-card">
+                <article class="vr-lab-card spotlight-card">
                     <div class="vr-lab-media">
                         <video class="project-video" playsinline controls preload="none" poster="assets/img/uca-vr-museum-poster.jpg" aria-label="UCA VR Museum experience demonstration">
                             <source data-src="assets/img/uca-vr-museum.mp4" type="video/mp4">
@@ -664,7 +717,7 @@
                     <h3 data-i18n="ue4_studies_title">Unreal Engine 4 Mechanics</h3>
                 </div>
                 <div class="research-grid">
-                    <article class="research-card research-card-violet">
+                    <article class="research-card spotlight-card research-card-violet">
                         <div class="research-media">
                             <video class="project-video" muted loop playsinline controls preload="none" aria-label="Animation retargeting demonstration">
                                 <source data-src="assets/img/PP-M1.mp4" type="video/mp4">
@@ -677,7 +730,7 @@
                         </div>
                     </article>
 
-                    <article class="research-card research-card-cyan">
+                    <article class="research-card spotlight-card research-card-cyan">
                         <div class="research-media">
                             <video class="project-video" muted loop playsinline controls preload="none" aria-label="Runtime character swap demonstration">
                                 <source data-src="assets/img/PP-M2.mp4" type="video/mp4">
@@ -690,7 +743,7 @@
                         </div>
                     </article>
 
-                    <article class="research-card research-card-lime">
+                    <article class="research-card spotlight-card research-card-lime">
                         <div class="research-media">
                             <video class="project-video" muted loop playsinline controls preload="none" aria-label="VFX state machine demonstration">
                                 <source data-src="assets/img/PP-M3.mp4" type="video/mp4">
