@@ -15,13 +15,14 @@
     <meta property="og:image" content="https://gardo93g.github.io/assets/img/og-portfolio.png" />
     <meta property="og:image:alt" content="Edgardo Galdamez — Unity Developer" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Edgardo Galdamez | Unity Developer" />
+    <meta name="twitter:description" content="Unity development focused on UI, gameplay systems, mobile production, and LiveOps." />
+    <meta name="twitter:image" content="https://gardo93g.github.io/assets/img/og-portfolio.png" />
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
     {
@@ -31,188 +32,536 @@
         "url": "https://gardo93g.github.io/",
         "jobTitle": "Unity Developer",
         "email": "mailto:gardo93g@gmail.com",
-        "sameAs": ["https://github.com/gardo93g", "https://www.linkedin.com/in/edgardo-g-930568143"],
-        "knowsAbout": ["Unity", "C#", "Unity UI Toolkit", "Unity uGUI", "Mobile game development", "LiveOps", "DOTween", "Addressables"]
+        "sameAs": [
+            "https://github.com/gardo93g",
+            "https://www.linkedin.com/in/edgardo-g-930568143"
+        ],
+        "knowsAbout": [
+            "Unity",
+            "C#",
+            "Unity UI Toolkit",
+            "Unity uGUI",
+            "Mobile game development",
+            "LiveOps",
+            "DOTween",
+            "Addressables",
+            "Blender",
+            "Model Context Protocol"
+        ]
     }
     </script>
 </head>
 <body id="page-top">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip_link">Skip to main content</a>
 
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top" aria-label="Edgardo Galdamez, back to top"><span aria-hidden="true">&lt;</span>EG<span aria-hidden="true">/&gt;</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="menu-label">MENU</span><i class="fas fa-bars" aria-hidden="true"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="#selected-work">Selected work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#personal-projects">R&amp;D</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv">CV <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation -->
+    <header class="navbar-wrapper" id="mainNav">
+        <div class="site-container nav-container">
+            <a class="navbar-brand" href="#page-top" aria-label="Edgardo Galdamez, back to top">
+                <span class="brand-bracket">&lt;</span>EG<span class="brand-bracket">/&gt;</span>
+            </a>
 
-    <header class="landing-hero">
-        <video class="video-bg" autoplay muted loop playsinline preload="metadata" poster="assets/img/background.png" aria-hidden="true"><source src="assets/img/Landingpage.mp4" type="video/mp4"></video>
-        <div class="video-overlay" aria-hidden="true"></div>
-        <div class="container hero-grid">
-            <div class="hero-copy">
-                <p class="hero-kicker font-mono"><span>EDGARDO GALDAMEZ</span> // UNITY DEVELOPER · UI &amp; GAMEPLAY SYSTEMS</p>
-                <h1>UNITY DEVELOPER.<br><span>UI, GAMEPLAY &amp; SYSTEMS.</span></h1>
-                <p class="hero-summary">I build UI and gameplay systems in Unity, with a focus on responsive interfaces, progression, and LiveOps.</p>
-                <div class="hero-actions">
-                    <a href="#selected-work" class="button button-primary">Explore selected work <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
-                    <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer" class="button button-secondary">Download CV</a>
+            <div class="nav-right-cluster">
+                <!-- Language Switcher (Desktop) -->
+                <div class="lang-switch lang-switch-desktop" role="group" aria-label="Language selector">
+                    <button type="button" class="lang-btn active font-mono" data-lang="en" aria-pressed="true">EN</button>
+                    <span class="lang-divider font-mono" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn font-mono" data-lang="es" aria-pressed="false">ES</button>
                 </div>
+                
+                <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+                    <span class="menu-label font-mono" data-i18n="nav_menu_btn">MENU</span>
+                    <span class="hamburger-box" aria-hidden="true">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
-            <ul class="hero-metrics" aria-label="Professional highlights">
-                <li><strong>5+ years</strong><span>Making games</span></li>
-                <li><strong>Unity &amp; C#</strong><span>UI · Gameplay · Systems</span></li>
-                <li><strong>Remote</strong><span>Available worldwide</span></li>
-            </ul>
+
+            <nav class="nav-menu" id="primaryNav" aria-label="Main navigation">
+                <!-- Language Switcher (Mobile Drawer) -->
+                <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language selector">
+                    <button type="button" class="lang-btn active font-mono" data-lang="en" aria-pressed="true">ENGLISH</button>
+                    <span class="lang-divider font-mono" aria-hidden="true">|</span>
+                    <button type="button" class="lang-btn font-mono" data-lang="es" aria-pressed="false">ESPAÑOL</button>
+                </div>
+
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="#selected-work" data-i18n="nav_selected_work">Selected work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav_experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#personal-projects" data-i18n="nav_rnd">R&amp;D Lab</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
+                    <li class="nav-item nav-item-cta">
+                        <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv">
+                            <span>CV</span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="hero-footer container font-mono" aria-label="Professional highlights">
-            <a href="#selected-work">SCROLL TO CASES <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
-        </div>
+        <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="landing-hero" aria-label="Introduction">
+        <video class="video-bg" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/img/background.png" aria-hidden="true">
+            <source src="assets/img/Landingpage.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay" aria-hidden="true"></div>
+        
+        <div class="site-container hero-grid">
+            <div class="hero-copy">
+                <div class="hero-status font-mono">
+                    <span class="status-dot"></span>
+                    <span data-i18n="hero_status">AVAILABLE FOR REMOTE ROLES · WORLDWIDE</span>
+                </div>
+                <p class="hero-kicker font-mono"><span>EDGARDO GALDAMEZ</span> // <span data-i18n="hero_kicker_title">UNITY DEVELOPER · UI &amp; GAMEPLAY SYSTEMS</span></p>
+                <h1><span data-i18n="hero_h1_top">UNITY DEVELOPER.</span><br><span data-i18n="hero_h1_span">UI, GAMEPLAY &amp; SYSTEMS.</span></h1>
+                <p class="hero-summary" data-i18n="hero_summary">5+ years crafting responsive game interfaces, LiveOps architectures, tactile gameplay feedback, and robust C# systems in Unity.</p>
+                <div class="hero-actions">
+                    <a href="#selected-work" class="button button-primary">
+                        <span data-i18n="hero_btn_explore">Explore selected work</span>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                    </a>
+                    <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer" class="button button-secondary">
+                        <span data-i18n="hero_btn_cv">Download CV</span>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="hero-metrics font-mono" aria-label="Professional highlights">
+                <li>
+                    <strong data-i18n="hero_metric_1_strong">5+ years</strong>
+                    <span data-i18n="hero_metric_1_span">Shipped Mobile Games</span>
+                </li>
+                <li>
+                    <strong data-i18n="hero_metric_2_strong">Unity &amp; C#</strong>
+                    <span data-i18n="hero_metric_2_span">UI · Gameplay · LiveOps</span>
+                </li>
+                <li>
+                    <strong data-i18n="hero_metric_3_strong">Remote Ready</strong>
+                    <span data-i18n="hero_metric_3_span">US Teams &amp; Global Studios</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hero-footer site-container font-mono">
+            <button type="button" class="hero-video-toggle" id="heroVideoToggle" aria-label="Pause background video" title="Toggle background video playback">
+                <span class="toggle-icon-play" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </span>
+                <span class="toggle-icon-pause" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                </span>
+                <span class="toggle-text" data-i18n="hero_bg_video_toggle">BG VIDEO</span>
+            </button>
+            <a href="#selected-work" class="hero-scroll-hint">
+                <span data-i18n="hero_scroll_hint">SCROLL TO CASES</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </a>
+        </div>
+    </section>
+
     <main id="main-content">
+        <!-- Selected Work Section -->
         <section class="section selected-work-section" id="selected-work" aria-labelledby="selected-work-title">
-            <div class="container">
+            <div class="site-container">
                 <div class="section-heading">
-                    <p class="section-index font-mono">02 // SELECTED WORK</p>
-                    <div><h2 id="selected-work-title">My work at Harmony Games.</h2><p>LiveOps screens, gameplay feedback, rewards, and a few smaller features I built along the way.</p></div>
+                    <p class="section-index font-mono" data-i18n="section_01_index">01 // SELECTED WORK</p>
+                    <div>
+                        <h2 id="selected-work-title" data-i18n="section_01_title">Production Work at Harmony Games.</h2>
+                        <p data-i18n="section_01_subtitle">LiveOps architectures, dynamic progression maps, responsive menus, DOTween feedback sequences, and integrated audio systems.</p>
+                    </div>
                 </div>
 
-                <div class="case-picker" aria-label="Choose a featured case">
+                <!-- Category Filters -->
+                <div class="filter-bar" role="toolbar" aria-label="Filter projects by discipline">
+                    <span class="filter-label font-mono" data-i18n="filter_label">FILTER BY:</span>
+                    <div class="filter-group">
+                        <button type="button" class="filter-chip active font-mono" data-filter="all" aria-pressed="true">
+                            <span data-i18n="filter_all">ALL WORK</span>
+                            <span class="filter-count">12</span>
+                        </button>
+                        <button type="button" class="filter-chip font-mono" data-filter="liveops" aria-pressed="false">
+                            <span data-i18n="filter_liveops">LIVEOPS &amp; UI</span>
+                            <span class="filter-count">5</span>
+                        </button>
+                        <button type="button" class="filter-chip font-mono" data-filter="gameplay" aria-pressed="false">
+                            <span data-i18n="filter_gameplay">GAMEPLAY &amp; MOTION</span>
+                            <span class="filter-count">4</span>
+                        </button>
+                        <button type="button" class="filter-chip font-mono" data-filter="rnd" aria-pressed="false">
+                            <span data-i18n="filter_rnd">R&amp;D · BLENDER · VR</span>
+                            <span class="filter-count">3</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Featured Case Selector Cards -->
+                <div class="case-picker" aria-label="Choose a featured production case">
                     <button type="button" class="case-card case-card-cyan active" aria-pressed="true" data-case-trigger
-                        data-video="assets/img/harmony-liveops-flow.mp4" data-poster="assets/img/harmony-liveops-flow.jpg"
-                        data-title="LiveOps &amp; Progression Flow" data-description="I worked on progression maps, event entry points, boosters, rewards, and the flow into the next level."
-                        data-role="UI and systems integration" data-focus="State flow, events, rewards" data-stack="Unity · C# · Firebase · Addressables">
-                        <img src="assets/img/harmony-liveops-flow.jpg" alt="Domino Delights LiveOps progression interface" width="430" height="888">
-                        <span class="case-card-shade" aria-hidden="true"></span><span class="case-number font-mono">CASE 01</span>
-                        <span class="case-card-copy"><strong>LiveOps &amp; Progression</strong><small>Systems / player flow</small></span>
+                        data-case-id="harmony-liveops"
+                        data-category="liveops"
+                        data-video="assets/img/harmony-liveops-flow.mp4" 
+                        data-poster="assets/img/harmony-liveops-flow.jpg"
+                        data-title="LiveOps &amp; Progression Flow" 
+                        data-description="Engineered progression maps, event entry points, boosters, multi-tier reward sequences, and decoupled player flow state machines."
+                        data-role="UI &amp; Systems Architecture" 
+                        data-focus="State Flow, Events, Rewards &amp; Backend Sync" 
+                        data-stack="Unity · C# · Firebase · Addressables · DOTween">
+                        <img src="assets/img/harmony-liveops-flow.jpg" alt="Domino Delights LiveOps progression interface" width="430" height="888" loading="lazy">
+                        <span class="case-card-shade" aria-hidden="true"></span>
+                        <span class="case-number font-mono">CASE 01</span>
+                        <span class="case-card-copy">
+                            <strong data-i18n="case01_card_title">LiveOps &amp; Progression</strong>
+                            <small data-i18n="case01_card_sub">Systems / Player Flow</small>
+                        </span>
                     </button>
+
                     <button type="button" class="case-card case-card-violet" aria-pressed="false" data-case-trigger
-                        data-video="assets/img/harmony-tile-animations.mp4" data-poster="assets/img/harmony-tile-animations.jpg"
-                        data-title="Gameplay Motion &amp; Feedback" data-description="I handled the motion and feedback for dealing, placing, and matching tiles so each action felt clear."
-                        data-role="UI and gameplay" data-focus="Motion, timing, feedback" data-stack="Unity · C# · DOTween · uGUI">
-                        <img src="assets/img/harmony-tile-animations.jpg" alt="Domino tile interaction and animation" width="430" height="888">
-                        <span class="case-card-shade" aria-hidden="true"></span><span class="case-number font-mono">CASE 02</span>
-                        <span class="case-card-copy"><strong>Gameplay Feedback</strong><small>Motion / interaction</small></span>
+                        data-case-id="harmony-tile"
+                        data-category="gameplay"
+                        data-video="assets/img/harmony-tile-animations.mp4" 
+                        data-poster="assets/img/harmony-tile-animations.jpg"
+                        data-title="Gameplay Motion &amp; Feedback" 
+                        data-description="Crafted tactile tile physics feel, dealing choreographies, valid placement hints, and snappy board feedback running at steady 60 FPS."
+                        data-role="Gameplay &amp; UI Motion" 
+                        data-focus="Tactile Game Feel, Input Handling, Non-Alloc Sequences" 
+                        data-stack="Unity · C# · DOTween · uGUI · Particle FX">
+                        <img src="assets/img/harmony-tile-animations.jpg" alt="Domino tile interaction and animation" width="430" height="888" loading="lazy">
+                        <span class="case-card-shade" aria-hidden="true"></span>
+                        <span class="case-number font-mono">CASE 02</span>
+                        <span class="case-card-copy">
+                            <strong data-i18n="case02_card_title">Gameplay Feedback</strong>
+                            <small data-i18n="case02_card_sub">Motion / Interaction</small>
+                        </span>
                     </button>
+
                     <button type="button" class="case-card case-card-lime" aria-pressed="false" data-case-trigger
-                        data-video="assets/img/harmony-streak-reward-vfx.mp4" data-poster="assets/img/harmony-streak-reward-vfx.jpg"
-                        data-title="Tile Motion &amp; VFX" data-description="I worked on the tile movement and VFX, using DOTween to make each animation feel smooth and responsive."
-                        data-role="UI animation and VFX" data-focus="Tile motion, timing, game feel" data-stack="Unity · C# · DOTween · VFX">
-                        <img src="assets/img/harmony-streak-reward-vfx.jpg" alt="Streak reward animation and visual effects" width="430" height="888">
-                        <span class="case-card-shade" aria-hidden="true"></span><span class="case-number font-mono">CASE 03</span>
-                        <span class="case-card-copy"><strong>Tile Motion &amp; VFX</strong><small>DOTween / game feel</small></span>
+                        data-case-id="harmony-streak"
+                        data-category="gameplay"
+                        data-video="assets/img/harmony-streak-reward-vfx.mp4" 
+                        data-poster="assets/img/harmony-streak-reward-vfx.jpg"
+                        data-title="Tile Motion &amp; VFX Rewards" 
+                        data-description="Implemented streak multipliers, particle burst choreography, screen-shake dynamics, and layered VFX canvas hierarchy."
+                        data-role="UI Animation &amp; VFX Engineering" 
+                        data-focus="Particle Systems, Timing Choreography, Asset Pooling" 
+                        data-stack="Unity · C# · DOTween · VFX · Custom Shaders">
+                        <img src="assets/img/harmony-streak-reward-vfx.jpg" alt="Streak reward animation and visual effects" width="430" height="888" loading="lazy">
+                        <span class="case-card-shade" aria-hidden="true"></span>
+                        <span class="case-number font-mono">CASE 03</span>
+                        <span class="case-card-copy">
+                            <strong data-i18n="case03_card_title">Tile Motion &amp; VFX</strong>
+                            <small data-i18n="case03_card_sub">DOTween / Game Feel</small>
+                        </span>
                     </button>
                 </div>
 
+                <!-- Active Case Stage -->
                 <article class="case-stage" id="featured-case-stage">
                     <div class="case-video-frame">
-                        <video id="featured-case-video" class="project-video" muted loop playsinline controls preload="none" poster="assets/img/harmony-liveops-flow.jpg" aria-label="Selected Harmony Games work sample"><source data-src="assets/img/harmony-liveops-flow.mp4" type="video/mp4"></video>
+                        <video id="featured-case-video" class="project-video" muted loop playsinline controls preload="none" poster="assets/img/harmony-liveops-flow.jpg" aria-label="Selected Harmony Games work sample">
+                            <source data-src="assets/img/harmony-liveops-flow.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-controls-overlay">
+                            <button type="button" class="theater-trigger font-mono" id="openTheaterBtn" aria-label="Expand video in theater mode" title="Open in Theater Mode">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                                <span data-i18n="btn_expand_theater">EXPAND THEATER</span>
+                            </button>
+                        </div>
                     </div>
+
                     <div class="case-detail" aria-live="polite">
-                        <p class="eyebrow font-mono">HARMONY GAMES</p>
+                        <div class="case-detail-header">
+                            <p class="eyebrow font-mono" data-i18n="case_company_eyebrow">HARMONY GAMES · PRODUCTION</p>
+                            <span class="badge-liveops font-mono" data-i18n="badge_shipped">SHIPPED TITLE</span>
+                        </div>
                         <h3 id="featured-case-title">LiveOps &amp; Progression Flow</h3>
-                        <p id="featured-case-description">I worked on progression maps, event entry points, boosters, rewards, and the flow into the next level.</p>
+                        <p id="featured-case-description">Engineered progression maps, event entry points, boosters, multi-tier reward sequences, and decoupled player flow state machines.</p>
+                        
                         <dl class="case-facts">
-                            <div><dt class="font-mono">MY PART</dt><dd id="featured-case-role">UI and systems integration</dd></div>
-                            <div><dt class="font-mono">FOCUS</dt><dd id="featured-case-focus">State flow, events, rewards</dd></div>
-                            <div><dt class="font-mono">BUILT WITH</dt><dd id="featured-case-stack">Unity · C# · Firebase · Addressables</dd></div>
+                            <div>
+                                <dt class="font-mono" data-i18n="fact_my_part">MY PART</dt>
+                                <dd id="featured-case-role">UI &amp; Systems Architecture</dd>
+                            </div>
+                            <div>
+                                <dt class="font-mono" data-i18n="fact_focus">FOCUS</dt>
+                                <dd id="featured-case-focus">State Flow, Events, Rewards &amp; Backend Sync</dd>
+                            </div>
+                            <div>
+                                <dt class="font-mono" data-i18n="fact_built_with">BUILT WITH</dt>
+                                <dd id="featured-case-stack">Unity · C# · Firebase · Addressables · DOTween</dd>
+                            </div>
                         </dl>
-                        <a href="https://harmonygames.co/" target="_blank" rel="noopener noreferrer" class="text-link">Visit Harmony Games <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+
+                        <div class="case-stage-actions">
+                            <button type="button" class="button button-primary" id="openDeepDiveBtn" data-case-id="harmony-liveops">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                <span data-i18n="btn_deep_dive">Technical Deep-Dive</span>
+                            </button>
+                            <a href="https://harmonygames.co/" target="_blank" rel="noopener noreferrer" class="text-link font-mono">
+                                <span data-i18n="btn_visit_harmony">Visit Harmony Games</span>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
-                <div class="sample-rail-heading"><p class="font-mono">MORE FROM HARMONY</p></div>
+                <!-- Additional Production Samples Rail -->
+                <div class="sample-rail-heading">
+                    <p class="font-mono" data-i18n="sample_rail_heading">MORE MODULES FROM HARMONY GAMES</p>
+                    <span class="font-mono" data-i18n="sample_rail_hint">SELECT TO LOAD PREVIEW</span>
+                </div>
                 <div class="sample-rail" aria-label="More production work samples">
                     <button type="button" class="sample-card" aria-pressed="false" data-case-trigger
-                        data-video="assets/img/harmony-domino-adventures-minigame.mp4" data-poster="assets/img/harmony-domino-adventures-minigame.jpg"
-                        data-title="Domino Adventures Minigame" data-description="I built this minigame from the first playable version through final polish."
-                        data-role="Full minigame" data-focus="Minigame loop, UI, polish" data-stack="Unity · C# · DOTween">
-                        <img src="assets/img/harmony-domino-adventures-minigame.jpg" alt="Domino Adventures minigame" width="430" height="888"><span><strong>Domino Adventures</strong><small>Built end to end</small></span>
+                        data-case-id="harmony-domino-adventures"
+                        data-category="gameplay"
+                        data-video="assets/img/harmony-domino-adventures-minigame.mp4" 
+                        data-poster="assets/img/harmony-domino-adventures-minigame.jpg"
+                        data-title="Domino Adventures Minigame" 
+                        data-description="Built this entire standalone minigame loop from first prototype through production polish: rules, board state, UI, and reward payouts."
+                        data-role="Full Minigame Architecture" 
+                        data-focus="Minigame Loop, uGUI Architecture, Balance Tuning" 
+                        data-stack="Unity · C# · ScriptableObjects · DOTween">
+                        <img src="assets/img/harmony-domino-adventures-minigame.jpg" alt="Domino Adventures minigame" width="430" height="888" loading="lazy">
+                        <span>
+                            <strong data-i18n="rail_sample_1_title">Domino Adventures</strong>
+                            <small data-i18n="rail_sample_1_sub">Full minigame loop</small>
+                        </span>
                     </button>
+
                     <button type="button" class="sample-card" aria-pressed="false" data-case-trigger
-                        data-video="assets/img/harmony-endless-horde-reward.mp4" data-poster="assets/img/harmony-endless-horde-reward.jpg"
-                        data-title="Endless Horde Reward Screen" data-description="I put together the end-of-run screen, including results, rewards, and completion feedback."
-                        data-role="Reward screen" data-focus="Results, rewards, completion" data-stack="Unity · C# · UI animation">
-                        <img src="assets/img/harmony-endless-horde-reward.jpg" alt="Endless Horde results and reward screen" width="430" height="888"><span><strong>Endless Horde</strong><small>Reward presentation</small></span>
+                        data-case-id="harmony-endless-horde"
+                        data-category="liveops"
+                        data-video="assets/img/harmony-endless-horde-reward.mp4" 
+                        data-poster="assets/img/harmony-endless-horde-reward.jpg"
+                        data-title="Endless Horde Reward Screen" 
+                        data-description="Built dynamic end-of-run reward screen with tally counters, currency animations, level-up feedback, and back-to-menu routing."
+                        data-role="Reward Screen &amp; Tally Systems" 
+                        data-focus="Async Tally Choreography, Audio Sync, Memory Pooling" 
+                        data-stack="Unity · C# · DOTween · uGUI">
+                        <img src="assets/img/harmony-endless-horde-reward.jpg" alt="Endless Horde results and reward screen" width="430" height="888" loading="lazy">
+                        <span>
+                            <strong data-i18n="rail_sample_2_title">Endless Horde</strong>
+                            <small data-i18n="rail_sample_2_sub">Reward tally flow</small>
+                        </span>
                     </button>
-                    <button type="button" class="sample-card" aria-pressed="false" data-case-trigger data-orientation="landscape" data-audio="true"
-                        data-video="assets/img/match3d-level-reward-sfx.mp4" data-poster="assets/img/match3d-level-reward-sfx.jpg"
-                        data-title="Match3D Reward Screen &amp; SFX" data-description="I implemented this level-complete screen in 2025 and handled the sound effect selection and integration."
-                        data-role="UI and sound" data-focus="Completion flow, reward clarity" data-stack="Unity · C# · SFX">
-                        <img src="assets/img/match3d-level-reward-sfx.jpg" alt="Match3D level reward screen" width="1904" height="984"><span><strong>Match3D Rewards</strong><small>UI + integrated SFX</small></span>
+
+                    <button type="button" class="sample-card" aria-pressed="false" data-case-trigger 
+                        data-case-id="match3d-rewards"
+                        data-category="liveops"
+                        data-orientation="landscape" 
+                        data-audio="true"
+                        data-video="assets/img/match3d-level-reward-sfx.mp4" 
+                        data-poster="assets/img/match3d-level-reward-sfx.jpg"
+                        data-title="Match3D Reward Screen &amp; SFX" 
+                        data-description="Engineered the level-complete reward popup, score calculation animation, sound effect curation, and audio bus integration."
+                        data-role="UI Engineering &amp; Audio Bus" 
+                        data-focus="Completion Flow, Audio Spatialization, UX Clarity" 
+                        data-stack="Unity · C# · SFX Integration · DOTween">
+                        <img src="assets/img/match3d-level-reward-sfx.jpg" alt="Match3D level reward screen" width="1904" height="984" loading="lazy">
+                        <span>
+                            <strong data-i18n="rail_sample_3_title">Match3D Rewards</strong>
+                            <small data-i18n="rail_sample_3_sub">UI + Integrated SFX</small>
+                        </span>
                     </button>
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section class="section experience-section" id="experience" aria-labelledby="experience-title">
-            <div class="container">
+            <div class="site-container">
                 <div class="section-heading">
-                    <p class="section-index font-mono">03 // EXPERIENCE</p>
-                    <div><h2 id="experience-title">Where I worked.</h2></div>
+                    <p class="section-index font-mono" data-i18n="section_02_index">02 // CAREER TIMELINE</p>
+                    <div>
+                        <h2 id="experience-title" data-i18n="section_02_title">Experience &amp; Track Record.</h2>
+                        <p data-i18n="section_02_subtitle">5+ years collaborating with international and US-based teams on mobile game production, rapid prototyping, and software engineering.</p>
+                    </div>
                 </div>
+
                 <div class="experience-timeline">
                     <article class="timeline-item timeline-item-featured">
-                        <div class="timeline-date font-mono"><span>2023 — 2025</span><small>REMOTE · USA</small></div>
-                        <div class="timeline-copy"><p class="role-label font-mono">MOBILE GAME DEVELOPER</p><h3>Harmony Games</h3><p>At Harmony, I worked on the UI for a live mobile game: menus, events, progression, rewards, backend-driven content, and plenty of production debugging.</p><div class="inline-tags"><span>Unity</span><span>C#</span><span>DOTween</span><span>LiveOps</span><span>Firebase</span></div></div>
-                        <ul class="timeline-highlights"><li>Menus, events, progression, and rewards</li><li>Working from Figma files</li><li>Addressables and live content</li></ul>
+                        <div class="timeline-date font-mono">
+                            <span>2023 — 2025</span>
+                            <small data-i18n="timeline_loc_remote_usa">REMOTE · USA</small>
+                        </div>
+                        <div class="timeline-copy">
+                            <p class="role-label font-mono" data-i18n="role_harmony">MOBILE GAME DEVELOPER</p>
+                            <h3>Harmony Games</h3>
+                            <p data-i18n="desc_harmony">Engineered core UI modules, live-game event flows, meta progression systems, and Firebase Remote Config hooks. Translated Figma designs into responsive uGUI screens with DOTween micro-animations and zero-GC allocations.</p>
+                            <div class="inline-tags">
+                                <span>Unity 2022 LTS</span>
+                                <span>C#</span>
+                                <span>DOTween</span>
+                                <span>LiveOps</span>
+                                <span>Firebase</span>
+                                <span>Addressables</span>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li data-i18n="harmony_h1">Live menus, events, progression, boosters, and rewards</li>
+                            <li data-i18n="harmony_h2">Pixel-perfect Figma-to-Unity UI implementation</li>
+                            <li data-i18n="harmony_h3">Addressables asset delivery and memory optimization</li>
+                            <li data-i18n="harmony_h4">Production bug fixing and LiveOps maintenance</li>
+                        </ul>
                     </article>
+
                     <article class="timeline-item">
-                        <div class="timeline-date font-mono"><span>2020 — 2023</span><small>REMOTE · USA</small></div>
-                        <div class="timeline-copy"><p class="role-label font-mono">MOBILE GAME DEVELOPER</p><h3>Kubiak LLC</h3><p>I built reusable UI and gameplay systems for several mobile prototypes, including screen flows, state machines, and transitions.</p></div>
-                        <p class="timeline-result"><strong>3 playable prototypes</strong><span>built in six weeks.</span></p>
+                        <div class="timeline-date font-mono">
+                            <span>2020 — 2023</span>
+                            <small data-i18n="timeline_loc_remote_usa">REMOTE · USA</small>
+                        </div>
+                        <div class="timeline-copy">
+                            <p class="role-label font-mono" data-i18n="role_kubiak">MOBILE GAME DEVELOPER</p>
+                            <h3>Kubiak LLC</h3>
+                            <p data-i18n="desc_kubiak">Built reusable gameplay mechanics, interaction architectures, and menu systems for multiple mobile prototypes under fast iterative cycles.</p>
+                            <div class="inline-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Physics 2D/3D</span>
+                                <span>Shaders</span>
+                                <span>Mobile UX</span>
+                            </div>
+                        </div>
+                        <div class="timeline-result">
+                            <strong data-i18n="result_kubiak_strong">3 Playable Prototypes</strong>
+                            <span data-i18n="result_kubiak_span">delivered within six weeks from concept to device.</span>
+                        </div>
                     </article>
+
                     <article class="timeline-item">
-                        <div class="timeline-date font-mono"><span>2019 — 2020</span><small>EL SALVADOR</small></div>
-                        <div class="timeline-copy"><p class="role-label font-mono">GAME DEVELOPER INTERN</p><h3>TreeCloud Technologies</h3><p>I prototyped motion-controlled games, drone behavior, and LiDAR visualization tools.</p></div>
-                        <div class="inline-tags"><span>Unreal Engine 4</span><span>Kinect</span><span>LiDAR</span></div>
+                        <div class="timeline-date font-mono">
+                            <span>2019 — 2020</span>
+                            <small>SAN SALVADOR</small>
+                        </div>
+                        <div class="timeline-copy">
+                            <p class="role-label font-mono" data-i18n="role_treecloud">GAME DEVELOPER INTERN</p>
+                            <h3>TreeCloud Technologies</h3>
+                            <p data-i18n="desc_treecloud">Prototyped motion-controlled interactive games, Kinect hardware integrations, drone pathfinding, and point-cloud LiDAR visualization in Unreal Engine 4.</p>
+                            <div class="inline-tags">
+                                <span>Unreal Engine 4</span>
+                                <span>C++</span>
+                                <span>Kinect V2</span>
+                                <span>LiDAR</span>
+                                <span>Hardware Input</span>
+                            </div>
+                        </div>
                     </article>
+
                     <article class="timeline-item">
-                        <div class="timeline-date font-mono"><span>2017 — 2019</span><small>EL SALVADOR</small></div>
-                        <div class="timeline-copy"><p class="role-label font-mono">JUNIOR SOFTWARE DEVELOPER</p><h3>OFBOX</h3><p>I fixed production issues, improved legacy software, and built internal tools for data and integrations.</p></div>
+                        <div class="timeline-date font-mono">
+                            <span>2017 — 2019</span>
+                            <small>SAN SALVADOR</small>
+                        </div>
+                        <div class="timeline-copy">
+                            <p class="role-label font-mono" data-i18n="role_ofbox">JUNIOR SOFTWARE DEVELOPER</p>
+                            <h3>OFBOX</h3>
+                            <p data-i18n="desc_ofbox">Developed internal workflow tools, automated data integration pipelines, and resolved production bugs across legacy enterprise codebases.</p>
+                            <div class="inline-tags">
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>SQL</span>
+                                <span>System Integrations</span>
+                            </div>
+                        </div>
                     </article>
                 </div>
 
+                <!-- Prototype Archives -->
                 <div class="prototype-archive">
-                    <p class="archive-label font-mono">OLDER PROJECTS</p>
+                    <p class="archive-label font-mono" data-i18n="archive_label">MECHANICS ARCHIVE</p>
+                    
                     <details class="archive-drawer">
-                        <summary><span><strong>Kubiak LLC — Mobile prototypes</strong><small>Five playable mechanics and UI systems</small></span><span class="summary-action font-mono">VIEW PROJECTS <i class="fas fa-plus" aria-hidden="true"></i></span></summary>
+                        <summary>
+                            <span>
+                                <strong data-i18n="archive_kubiak_title">Kubiak LLC — Mobile Prototypes</strong>
+                                <small data-i18n="archive_kubiak_sub">Five interactive mechanics and UI systems</small>
+                            </span>
+                            <span class="summary-action font-mono">
+                                <span data-i18n="archive_explore">EXPLORE MECHANICS</span>
+                                <svg class="icon icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </summary>
                         <div class="archive-content">
                             <div class="showcase-container" id="kubiak-showcase">
-                                <div class="showcase-viewport"><video id="kubiak-video" class="project-video" muted loop playsinline controls preload="none" aria-label="Kubiak prototype demonstration"><source data-src="assets/img/DD-M1.mp4" type="video/mp4"></video><div class="viewport-overlay"><h4 id="kubiak-title">Stable Cleaning</h4><p id="kubiak-desc">Drag-and-drop mechanic with physics interaction.</p></div></div>
+                                <div class="showcase-viewport">
+                                    <video id="kubiak-video" class="project-video" muted loop playsinline controls preload="none" aria-label="Kubiak prototype demonstration">
+                                        <source data-src="assets/img/DD-M1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="viewport-overlay">
+                                        <h4 id="kubiak-title">Stable Cleaning</h4>
+                                        <p id="kubiak-desc">Drag-and-drop mechanic with custom physics interaction.</p>
+                                    </div>
+                                </div>
                                 <div class="showcase-menu" aria-label="Select a Kubiak prototype">
-                                    <button type="button" class="mechanic-trigger active" aria-pressed="true" data-showcase="kubiak" data-video="assets/img/DD-M1.mp4" data-title="Stable Cleaning" data-description="Drag-and-drop mechanic with physics interaction."><i class="fas fa-hand" aria-hidden="true"></i><span><strong>Stable Cleaning</strong><small>Interaction system</small></span></button>
-                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/DD-M2.mp4" data-title="Horse Grooming" data-description="Texture masking and particle systems."><i class="fas fa-horse" aria-hidden="true"></i><span><strong>Horse Grooming</strong><small>Shaders &amp; particles</small></span></button>
-                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/DD-M3.mp4" data-title="Feeding System" data-description="Physics-based object instantiation and collision."><i class="fas fa-carrot" aria-hidden="true"></i><span><strong>Feeding System</strong><small>Physics logic</small></span></button>
-                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/lost-realms-strategy-economy.mp4" data-poster="assets/img/lost-realms-strategy-economy.jpg" data-title="Strategy Economy UI" data-description="Lost Realms strategy and economy UI implementation."><i class="fas fa-coins" aria-hidden="true"></i><span><strong>Strategy Economy UI</strong><small>UI/UX economy</small></span></button>
-                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/GG-M2.mp4" data-title="Car Upgrade UI" data-description="Vehicle customization and data binding."><i class="fas fa-car" aria-hidden="true"></i><span><strong>Car Upgrade UI</strong><small>Data binding</small></span></button>
+                                    <button type="button" class="mechanic-trigger active" aria-pressed="true" data-showcase="kubiak" data-video="assets/img/DD-M1.mp4" data-title="Stable Cleaning" data-description="Drag-and-drop mechanic with custom physics interaction.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+                                        <span><strong data-i18n="kubiak_m1_title">Stable Cleaning</strong><small data-i18n="kubiak_m1_sub">Interaction system</small></span>
+                                    </button>
+                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/DD-M2.mp4" data-title="Horse Grooming" data-description="Texture masking, render textures, and particle systems.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                                        <span><strong data-i18n="kubiak_m2_title">Horse Grooming</strong><small data-i18n="kubiak_m2_sub">Shaders &amp; particles</small></span>
+                                    </button>
+                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/DD-M3.mp4" data-title="Feeding System" data-description="Physics-based object instantiation, trajectory, and collision.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 16.88a7 7 0 0 1 9.8-9.8 7 7 0 0 1 9.2 9.2 7 7 0 0 1-9.2 9.2 7 7 0 0 1-9.8-8.6Z"/><path d="M12 2v5"/></svg>
+                                        <span><strong data-i18n="kubiak_m3_title">Feeding System</strong><small data-i18n="kubiak_m3_sub">Physics logic</small></span>
+                                    </button>
+                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/lost-realms-strategy-economy.mp4" data-poster="assets/img/lost-realms-strategy-economy.jpg" data-title="Strategy Economy UI" data-description="Lost Realms strategy and resource economy UI architecture.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/></svg>
+                                        <span><strong data-i18n="kubiak_m4_title">Strategy Economy UI</strong><small data-i18n="kubiak_m4_sub">UI/UX Economy</small></span>
+                                    </button>
+                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="kubiak" data-video="assets/img/GG-M2.mp4" data-title="Car Upgrade UI" data-description="Vehicle customization, stats calculation, and data binding.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 10.7 2 11 2 11.4V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                                        <span><strong data-i18n="kubiak_m5_title">Car Upgrade UI</strong><small data-i18n="kubiak_m5_sub">Data binding</small></span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </details>
+
                     <details class="archive-drawer">
-                        <summary><span><strong>TreeCloud — Technical prototypes</strong><small>Motion input, LiDAR, and interactive logic</small></span><span class="summary-action font-mono">VIEW PROJECTS <i class="fas fa-plus" aria-hidden="true"></i></span></summary>
+                        <summary>
+                            <span>
+                                <strong data-i18n="archive_treecloud_title">TreeCloud — Technical Prototypes</strong>
+                                <small data-i18n="archive_treecloud_sub">Hardware inputs, LiDAR data, and gesture control</small>
+                            </span>
+                            <span class="summary-action font-mono">
+                                <span data-i18n="archive_explore">EXPLORE MECHANICS</span>
+                                <svg class="icon icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </summary>
                         <div class="archive-content">
                             <div class="showcase-container" id="treecloud-showcase">
-                                <div class="showcase-viewport"><video id="treecloud-video" class="project-video" muted loop playsinline controls preload="none" aria-label="TreeCloud prototype demonstration"><source data-src="assets/img/TC-M1.mp4" type="video/mp4"></video><div class="viewport-overlay"><h4 id="treecloud-title">Kinect Ping Pong</h4><p id="treecloud-desc">Motion capture input mapped to paddle physics.</p></div></div>
+                                <div class="showcase-viewport">
+                                    <video id="treecloud-video" class="project-video" muted loop playsinline controls preload="none" aria-label="TreeCloud prototype demonstration">
+                                        <source data-src="assets/img/TC-M1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="viewport-overlay">
+                                        <h4 id="treecloud-title">Kinect Ping Pong</h4>
+                                        <p id="treecloud-desc">Motion capture skeletal input mapped to 3D paddle physics.</p>
+                                    </div>
+                                </div>
                                 <div class="showcase-menu" aria-label="Select a TreeCloud prototype">
-                                    <button type="button" class="mechanic-trigger active" aria-pressed="true" data-showcase="treecloud" data-video="assets/img/TC-M1.mp4" data-title="Kinect Ping Pong" data-description="Motion capture input mapped to paddle physics."><i class="fas fa-table-tennis-paddle-ball" aria-hidden="true"></i><span><strong>Kinect Ping Pong</strong><small>Hardware input</small></span></button>
-                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="treecloud" data-video="assets/img/TC-M2.mp4" data-title="Smash Bug" data-description="Motion detection game logic using UE4."><i class="fas fa-bug" aria-hidden="true"></i><span><strong>Smash Bug</strong><small>Motion detection</small></span></button>
-                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="treecloud" data-video="assets/img/TC-M3.mp4" data-title="LiDAR Visualization" data-description="Data visualization of point clouds."><i class="fas fa-globe" aria-hidden="true"></i><span><strong>LiDAR Visualization</strong><small>Data processing</small></span></button>
-                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="treecloud" data-video="assets/img/TC-M4.mp4" data-title="Memory Game" data-description="Interactive logic controlled by body gestures."><i class="fas fa-brain" aria-hidden="true"></i><span><strong>Memory Game</strong><small>Gesture control</small></span></button>
+                                    <button type="button" class="mechanic-trigger active" aria-pressed="true" data-showcase="treecloud" data-video="assets/img/TC-M1.mp4" data-title="Kinect Ping Pong" data-description="Motion capture skeletal input mapped to 3D paddle physics.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                        <span><strong data-i18n="tc_m1_title">Kinect Ping Pong</strong><small data-i18n="tc_m1_sub">Hardware input</small></span>
+                                    </button>
+                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="treecloud" data-video="assets/img/TC-M2.mp4" data-title="Smash Bug" data-description="Real-time motion detection game logic built in UE4.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="14" x="8" y="6" rx="4"/><path d="m19 7-3 2"/><path d="m5 7 3 2"/><path d="m19 19-3-2"/><path d="m5 19 3-2"/><path d="M20 13h-4"/><path d="M4 13h4"/></svg>
+                                        <span><strong data-i18n="tc_m2_title">Smash Bug</strong><small data-i18n="tc_m2_sub">Motion detection</small></span>
+                                    </button>
+                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="treecloud" data-video="assets/img/TC-M3.mp4" data-title="LiDAR Visualization" data-description="High-density point cloud parsing and GPU visualization.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                        <span><strong data-i18n="tc_m3_title">LiDAR Visualization</strong><small data-i18n="tc_m3_sub">Data processing</small></span>
+                                    </button>
+                                    <button type="button" class="mechanic-trigger" aria-pressed="false" data-showcase="treecloud" data-video="assets/img/TC-M4.mp4" data-title="Memory Game" data-description="Full-body gesture recognition system triggering game rules.">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54Z"/></svg>
+                                        <span><strong data-i18n="tc_m4_title">Memory Game</strong><small data-i18n="tc_m4_sub">Gesture control</small></span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -221,93 +570,320 @@
             </div>
         </section>
 
+        <!-- R&D Lab Section -->
         <section class="section research-section" id="personal-projects" aria-labelledby="research-title">
-            <div class="container">
+            <div class="site-container">
                 <div class="section-heading">
-                    <p class="section-index font-mono">04 // R&amp;D LAB</p>
-                    <div><h2 id="research-title">Blender + MCP experiments.</h2><p>Exploring character retopology, shader development, animation, and game-ready spritesheet workflows.</p></div>
+                    <p class="section-index font-mono" data-i18n="section_03_index">03 // R&amp;D LAB</p>
+                    <div>
+                        <h2 id="research-title" data-i18n="section_03_title">Blender + MCP &amp; Engine Studies.</h2>
+                        <p data-i18n="section_03_subtitle">Exploring automated character retopology, shader pipelines, Blender-to-game spritesheets, and VR spatial navigation.</p>
+                    </div>
                 </div>
+
                 <div class="blender-lab-grid">
                     <article class="blender-lab-card blender-lab-card-character">
                         <div class="lab-card-heading">
-                            <div><span class="font-mono lab-number">EXPERIMENT 01</span><h3>Character pipeline</h3></div>
-                            <div class="lab-tags font-mono" aria-label="Experiment topics"><span>BLENDER</span><span>MCP</span><span>RETOPOLOGY</span><span>SHADERS</span></div>
+                            <div>
+                                <span class="font-mono lab-number">EXPERIMENT 01</span>
+                                <h3 data-i18n="lab_exp1_title">Automated Character Pipeline</h3>
+                            </div>
+                            <div class="lab-tags font-mono" aria-label="Experiment topics">
+                                <span>BLENDER</span>
+                                <span>MCP SERVER</span>
+                                <span>RETOPOLOGY</span>
+                                <span>SHADERS</span>
+                            </div>
                         </div>
-                        <p class="lab-summary">Using Blender with MCP to iterate from character reference to cleaner, animation-ready topology, while testing materials and stylized shader treatments.</p>
+                        <p class="lab-summary" data-i18n="lab_exp1_desc">Using Blender via Model Context Protocol (MCP) to automate iteration from high-poly character sculpts to clean, animation-ready quad topology and stylized shader setups.</p>
                         <div class="lab-image-pair">
-                            <figure class="lab-media lab-media-primary"><img src="assets/img/blender-mcp-retopology.png" width="1493" height="643" loading="lazy" alt="Blender comparison showing a dense character mesh beside a cleaner retopologized mesh"><figcaption class="font-mono">DENSE MESH → CLEAN RETOPOLOGY</figcaption></figure>
-                            <figure class="lab-media"><img src="assets/img/blender-character-reference.png" width="1904" height="836" loading="lazy" alt="Character reference and visual development studies used for the Blender experiment"><figcaption class="font-mono">REFERENCE / LOOK DEVELOPMENT</figcaption></figure>
+                            <figure class="lab-media lab-media-primary">
+                                <img src="assets/img/blender-mcp-retopology.png" width="1493" height="643" loading="lazy" alt="Blender comparison showing a dense character mesh beside a clean retopologized mesh">
+                                <figcaption class="font-mono" data-i18n="lab_fig_1">DENSE MESH → CLEAN TOPOLOGY</figcaption>
+                            </figure>
+                            <figure class="lab-media">
+                                <img src="assets/img/blender-character-reference.png" width="1904" height="836" loading="lazy" alt="Character reference and visual development studies used for the Blender experiment">
+                                <figcaption class="font-mono" data-i18n="lab_fig_2">LOOK DEVELOPMENT STUDY</figcaption>
+                            </figure>
                         </div>
                     </article>
 
                     <article class="blender-lab-card blender-lab-card-motion">
                         <div class="lab-card-heading">
-                            <div><span class="font-mono lab-number">EXPERIMENT 02</span><h3>Motion to sprites</h3></div>
-                            <div class="lab-tags font-mono" aria-label="Experiment topics"><span>ANIMATION</span><span>SPRITESHEETS</span><span>GAME PIPELINE</span></div>
+                            <div>
+                                <span class="font-mono lab-number">EXPERIMENT 02</span>
+                                <h3 data-i18n="lab_exp2_title">Motion to 2D Spritesheet Workflow</h3>
+                            </div>
+                            <div class="lab-tags font-mono" aria-label="Experiment topics">
+                                <span>3D RIGGING</span>
+                                <span>SPRITESHEETS</span>
+                                <span>PIPELINE TOOL</span>
+                            </div>
                         </div>
-                        <p class="lab-summary">Testing animation directly in Blender, then turning rendered motion into consistent sprite frames for real-time game use.</p>
+                        <p class="lab-summary" data-i18n="lab_exp2_desc">Authoring character animations in 3D Blender space and automatically rendering baked normal/color sprite frames for real-time 2D game engines.</p>
                         <div class="lab-video-pair">
-                            <figure class="lab-media"><video class="project-video" muted loop playsinline controls preload="none" aria-label="Blender character animation experiment"><source data-src="assets/img/blender-mcp-animation.mp4" type="video/mp4"></video><figcaption class="font-mono">ANIMATION TEST</figcaption></figure>
-                            <figure class="lab-media"><video class="project-video" muted loop playsinline controls preload="none" aria-label="Blender spritesheet workflow experiment"><source data-src="assets/img/blender-mcp-spritesheet.mp4" type="video/mp4"></video><figcaption class="font-mono">SPRITESHEET WORKFLOW</figcaption></figure>
+                            <figure class="lab-media">
+                                <video class="project-video" muted loop playsinline controls preload="none" aria-label="Blender character animation experiment">
+                                    <source data-src="assets/img/blender-mcp-animation.mp4" type="video/mp4">
+                                </video>
+                                <figcaption class="font-mono" data-i18n="lab_fig_3">ANIMATION RIGGING TEST</figcaption>
+                            </figure>
+                            <figure class="lab-media">
+                                <video class="project-video" muted loop playsinline controls preload="none" aria-label="Blender spritesheet workflow experiment">
+                                    <source data-src="assets/img/blender-mcp-spritesheet.mp4" type="video/mp4">
+                                </video>
+                                <figcaption class="font-mono" data-i18n="lab_fig_4">SPRITESHEET GENERATION</figcaption>
+                            </figure>
                         </div>
                     </article>
                 </div>
 
+                <!-- VR Lab Showcase -->
                 <article class="vr-lab-card">
                     <div class="vr-lab-media">
-                        <video class="project-video" playsinline controls preload="none" poster="assets/img/uca-vr-museum-poster.jpg" aria-label="UCA VR Museum experience demonstration"><source data-src="assets/img/uca-vr-museum.mp4" type="video/mp4"></video>
-                        <span class="vr-duration font-mono">VR EXPERIENCE / 02:43</span>
+                        <video class="project-video" playsinline controls preload="none" poster="assets/img/uca-vr-museum-poster.jpg" aria-label="UCA VR Museum experience demonstration">
+                            <source data-src="assets/img/uca-vr-museum.mp4" type="video/mp4">
+                        </video>
+                        <span class="vr-duration font-mono" data-i18n="vr_duration_label">VR IMMERSIVE WALKTHROUGH</span>
                     </div>
                     <div class="vr-lab-copy">
                         <span class="font-mono lab-number">EXPERIMENT 03</span>
-                        <h3>UCA VR Museum</h3>
-                        <p>A virtual museum prototype focused on spatial navigation and interaction inside an immersive environment.</p>
-                        <div class="lab-tags font-mono" aria-label="Experiment topics"><span>VR</span><span>INTERACTION</span><span>IMMERSIVE</span></div>
+                        <h3 data-i18n="lab_exp3_title">UCA VR Museum</h3>
+                        <p data-i18n="lab_exp3_desc">An interactive virtual museum application developed for VR headsets, focusing on continuous spatial locomotion, object inspectability, and ambient acoustic zones.</p>
+                        <div class="lab-tags font-mono" aria-label="Experiment topics">
+                            <span>VR HEADSETS</span>
+                            <span>SPATIAL AUDIO</span>
+                            <span>INTERACTION</span>
+                        </div>
                     </div>
                 </article>
 
+                <!-- Earlier UE4 Research -->
                 <div class="earlier-research-heading">
-                    <span class="font-mono">EARLIER STUDIES</span>
-                    <h3>Unreal Engine prototypes</h3>
+                    <span class="font-mono" data-i18n="ue4_studies_kicker">TECHNICAL STUDIES</span>
+                    <h3 data-i18n="ue4_studies_title">Unreal Engine 4 Mechanics</h3>
                 </div>
                 <div class="research-grid">
-                    <article class="research-card research-card-violet"><div class="research-media"><video class="project-video" muted loop playsinline controls preload="none" aria-label="Animation retargeting demonstration"><source data-src="assets/img/PP-M1.mp4" type="video/mp4"></video></div><div class="research-copy"><span class="font-mono">RIGGING / ANIMATION</span><h3>Animation Retargeting</h3><p>Mapping human rigs to fighting animations.</p></div></article>
-                    <article class="research-card research-card-cyan"><div class="research-media"><video class="project-video" muted loop playsinline controls preload="none" aria-label="Runtime character swap demonstration"><source data-src="assets/img/PP-M2.mp4" type="video/mp4"></video></div><div class="research-copy"><span class="font-mono">RUNTIME SYSTEMS</span><h3>Character Swap</h3><p>Runtime mesh and skeleton swapping.</p></div></article>
-                    <article class="research-card research-card-lime"><div class="research-media"><video class="project-video" muted loop playsinline controls preload="none" aria-label="VFX state machine demonstration"><source data-src="assets/img/PP-M3.mp4" type="video/mp4"></video></div><div class="research-copy"><span class="font-mono">VFX / STATE</span><h3>VFX State Machines</h3><p>Shield activation and collision feedback logic.</p></div></article>
+                    <article class="research-card research-card-violet">
+                        <div class="research-media">
+                            <video class="project-video" muted loop playsinline controls preload="none" aria-label="Animation retargeting demonstration">
+                                <source data-src="assets/img/PP-M1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="research-copy">
+                            <span class="font-mono">RIGGING / ANIMATION</span>
+                            <h3 data-i18n="ue4_m1_title">Animation Retargeting</h3>
+                            <p data-i18n="ue4_m1_desc">Skeletal retargeting between diverse humanoid proportions.</p>
+                        </div>
+                    </article>
+
+                    <article class="research-card research-card-cyan">
+                        <div class="research-media">
+                            <video class="project-video" muted loop playsinline controls preload="none" aria-label="Runtime character swap demonstration">
+                                <source data-src="assets/img/PP-M2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="research-copy">
+                            <span class="font-mono">RUNTIME SYSTEMS</span>
+                            <h3 data-i18n="ue4_m2_title">Dynamic Mesh Swap</h3>
+                            <p data-i18n="ue4_m2_desc">Seamless runtime character swapping without state interruption.</p>
+                        </div>
+                    </article>
+
+                    <article class="research-card research-card-lime">
+                        <div class="research-media">
+                            <video class="project-video" muted loop playsinline controls preload="none" aria-label="VFX state machine demonstration">
+                                <source data-src="assets/img/PP-M3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="research-copy">
+                            <span class="font-mono">VFX / STATE</span>
+                            <h3 data-i18n="ue4_m3_title">Shield State Machines</h3>
+                            <p data-i18n="ue4_m3_desc">Shield activation, impact dissipation, and audio sync logic.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section class="section about-section" id="about" aria-labelledby="about-title">
-            <div class="container about-grid">
-                <div class="about-portrait"><img src="assets/img/Photo.jpeg" width="420" height="420" alt="Portrait of Edgardo Galdamez"></div>
+            <div class="site-container about-grid">
+                <div class="about-portrait">
+                    <img src="assets/img/Photo.jpeg" width="420" height="420" alt="Portrait of Edgardo Galdamez" loading="lazy">
+                </div>
+                
                 <div class="about-copy">
-                    <p class="section-index font-mono">05 // ABOUT</p>
-                    <h2 id="about-title">About me.</h2>
-                    <p class="about-lead">I am a Unity developer and C# programmer. My work covers UI, gameplay, progression, backend data, and LiveOps.</p>
-                    <p>I usually take screens from Figma into Unity, make them responsive, hook them up, and help track down issues once they are in production.</p>
-                    <div class="profile-meta font-mono"><span><i class="fas fa-location-dot" aria-hidden="true"></i> San Salvador, El Salvador</span><span><i class="fas fa-globe" aria-hidden="true"></i> Spanish and English</span><span><i class="fas fa-briefcase" aria-hidden="true"></i> Worked remotely with US teams</span></div>
-                    <div class="tech-stack" aria-label="Technology stack"><span>C# / .NET</span><span>Unity uGUI</span><span>UI Toolkit</span><span>DOTween</span><span>Addressables</span><span>LiveOps</span><span>Firebase</span><span>Figma</span></div>
+                    <p class="section-index font-mono" data-i18n="section_04_index">04 // ABOUT ME</p>
+                    <h2 id="about-title" data-i18n="section_04_title">Building responsive, feel-good games.</h2>
+                    <p class="about-lead" data-i18n="about_lead">I am a Unity Developer and C# Software Engineer with over 5 years of hands-on game development experience.</p>
+                    <p data-i18n="about_p2">I specialize in taking intricate UI designs from Figma into production-grade Unity uGUI/UI Toolkit, hooking them into LiveOps backends, optimizing draw calls, and writing clean, maintainable C# gameplay systems.</p>
+                    
+                    <div class="profile-meta font-mono">
+                        <span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span data-i18n="about_loc">San Salvador, El Salvador</span>
+                        </span>
+                        <span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            <span data-i18n="about_lang">Fluent English &amp; Native Spanish</span>
+                        </span>
+                        <span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            <span data-i18n="about_remote">Remote Collaboration with US/Global Teams</span>
+                        </span>
+                    </div>
+
+                    <div class="tech-stack-container">
+                        <span class="tech-stack-title font-mono" data-i18n="tech_stack_title">CORE TECH STACK:</span>
+                        <div class="tech-stack" aria-label="Technology stack">
+                            <span>C# / .NET</span>
+                            <span>Unity uGUI</span>
+                            <span>UI Toolkit</span>
+                            <span>DOTween Pro</span>
+                            <span>Addressables</span>
+                            <span>LiveOps</span>
+                            <span>Firebase</span>
+                            <span>Figma to Unity</span>
+                            <span>Blender / MCP</span>
+                            <span>Shader Graph</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section class="contact-section" id="contact" aria-labelledby="contact-heading">
-            <div class="container contact-grid">
-                <div><p class="section-index font-mono">06 // CONTACT</p><h2 id="contact-heading">Want to work together?</h2></div>
+            <div class="site-container contact-grid">
+                <div>
+                    <p class="section-index font-mono" data-i18n="section_05_index">05 // GET IN TOUCH</p>
+                    <h2 id="contact-heading" data-i18n="section_05_title">Let's build great games together.</h2>
+                </div>
+                
                 <div class="contact-panel">
-                    <p>Feel free to reach out about Unity development, gameplay systems, mobile games, or remote work.</p>
-                    <a href="mailto:gardo93g@gmail.com" class="email-address">gardo93g@gmail.com</a>
-                    <div class="contact-actions"><a href="mailto:gardo93g@gmail.com" class="button button-primary"><i class="fas fa-envelope" aria-hidden="true"></i> Write an email</a><button type="button" class="button button-secondary" data-copy-email="gardo93g@gmail.com"><i class="fas fa-copy" aria-hidden="true"></i> Copy email</button></div>
+                    <p data-i18n="contact_p">I'm open to full-time remote opportunities, contractor roles, and technical collaborations in Unity UI and gameplay systems.</p>
+                    
+                    <a href="mailto:gardo93g@gmail.com" class="email-address font-mono">gardo93g@gmail.com</a>
+                    
+                    <div class="contact-actions">
+                        <a href="mailto:gardo93g@gmail.com" class="button button-primary">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span data-i18n="btn_write_email">Write an Email</span>
+                        </a>
+                        <button type="button" class="button button-secondary" data-copy-email="gardo93g@gmail.com" id="copyEmailBtn">
+                            <svg class="icon icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            <span class="btn-copy-label" data-i18n="btn_copy_email">Copy Email</span>
+                        </button>
+                    </div>
+
                     <p class="copy-status font-mono" data-copy-status aria-live="polite"></p>
-                    <div class="contact-links font-mono"><a href="https://www.linkedin.com/in/edgardo-g-930568143" target="_blank" rel="noopener noreferrer">LinkedIn <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/gardo93g" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer">CV <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+
+                    <div class="contact-links font-mono">
+                        <a href="https://www.linkedin.com/in/edgardo-g-930568143" target="_blank" rel="noopener noreferrer">
+                            <span>LinkedIn</span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                        <a href="https://github.com/gardo93g" target="_blank" rel="noopener noreferrer">
+                            <span>GitHub</span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                        <a href="assets/Edgardo_Galdamez_CV.pdf" target="_blank" rel="noopener noreferrer">
+                            <span data-i18n="link_resume">Resume / CV</span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer"><div class="container footer-row font-mono"><p>&copy; <span data-current-year>2026</span> Edgardo Galdamez.</p><a href="#page-top">BACK TO TOP <i class="fas fa-arrow-up" aria-hidden="true"></i></a></div></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="site-container footer-row font-mono">
+            <p>&copy; <span data-current-year>2026</span> Edgardo Galdamez.</p>
+            <a href="#page-top" class="back-to-top">
+                <span data-i18n="footer_back_to_top">BACK TO TOP</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Technical Deep-Dive Modal -->
+    <dialog class="deep-dive-dialog" id="deepDiveModal" aria-labelledby="modalTitle" aria-modal="true">
+        <div class="modal-card">
+            <header class="modal-header">
+                <div>
+                    <span class="modal-tag font-mono" id="modalTag">TECHNICAL CASE BREAKDOWN</span>
+                    <h2 class="modal-title" id="modalTitle">Case Study Title</h2>
+                </div>
+                <button type="button" class="modal-close-btn" id="closeDeepDiveBtn" aria-label="Close technical breakdown dialog">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </header>
+
+            <div class="modal-body" id="modalBody">
+                <div class="deep-dive-grid">
+                    <section class="deep-dive-block">
+                        <h4 class="font-mono block-heading">
+                            <span class="block-number">01</span> <span data-i18n="modal_block_01">THE CHALLENGE</span>
+                        </h4>
+                        <p id="modalChallenge">Loading challenge description...</p>
+                    </section>
+
+                    <section class="deep-dive-block">
+                        <h4 class="font-mono block-heading">
+                            <span class="block-number">02</span> <span data-i18n="modal_block_02">ARCHITECTURE &amp; IMPLEMENTATION</span>
+                        </h4>
+                        <p id="modalArchitecture">Loading architecture details...</p>
+                    </section>
+
+                    <section class="deep-dive-block">
+                        <h4 class="font-mono block-heading">
+                            <span class="block-number">03</span> <span data-i18n="modal_block_03">KEY TECHNICAL RESULTS</span>
+                        </h4>
+                        <ul class="deep-dive-list" id="modalHighlights">
+                            <li>Loading metrics...</li>
+                        </ul>
+                    </section>
+
+                    <section class="deep-dive-block deep-dive-stack-block">
+                        <h4 class="font-mono block-heading">
+                            <span class="block-number">04</span> <span data-i18n="modal_block_04">APPLIED TECHNOLOGIES</span>
+                        </h4>
+                        <div class="tech-stack" id="modalStackTags">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <footer class="modal-footer">
+                <button type="button" class="button button-secondary font-mono" id="modalCloseAction" data-i18n="btn_close_breakdown">CLOSE BREAKDOWN</button>
+            </footer>
+        </div>
+    </dialog>
+
+    <!-- Video Theater Lightbox Dialog -->
+    <dialog class="theater-dialog" id="theaterModal" aria-label="Video theater player" aria-modal="true">
+        <div class="theater-card">
+            <header class="theater-header">
+                <span class="theater-title font-mono" id="theaterTitle">Video Demonstration</span>
+                <button type="button" class="modal-close-btn" id="closeTheaterBtn" aria-label="Close theater player">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </header>
+            <div class="theater-media-container" id="theaterMediaFrame">
+                <video id="theaterVideo" controls playsinline preload="none" aria-label="Expanded demonstration video">
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Toast Notification for Actions -->
+    <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
