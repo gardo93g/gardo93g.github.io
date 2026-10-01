@@ -646,33 +646,41 @@
                                 <span>BLENDER</span>
                                 <span>MCP SERVER</span>
                                 <span>RETOPOLOGY</span>
-                                <span>SHADERS</span>
+                                <span>PBR BAKING</span>
                             </div>
                         </div>
-                        <p class="lab-summary" data-i18n="lab_exp1_desc">Using Blender via Model Context Protocol (MCP) to automate iteration from high-poly character sculpts to clean, animation-ready quad topology and stylized shader setups.</p>
-                        
-                        <!-- Interactive Mesh Comparison Slider -->
-                        <div class="mesh-comparison-slider" id="meshComparisonSlider" tabindex="0" role="region" aria-label="Interactive mesh comparison slider">
-                            <div class="comparison-layer comparison-base">
-                                <img src="assets/img/blender-character-reference.jpg" width="1904" height="836" loading="lazy" alt="Character visual development study">
-                                <span class="comparison-badge font-mono" data-i18n="lab_fig_2">LOOK DEVELOPMENT STUDY</span>
+                        <p class="lab-summary" data-i18n="lab_exp1_desc">Using Blender through the Model Context Protocol (MCP) to take a dense, fully triangulated source model to a clean quad-based mesh with baked PBR textures.</p>
+
+                        <div class="lab-figures">
+                            <figure class="lab-media">
+                                <img src="assets/img/blender-character-reference.jpg" width="1626" height="560" loading="lazy" alt="Three concept illustrations of the zombie boss character used as the look target">
+                                <figcaption class="font-mono" data-i18n="lab_fig_2">CONCEPT &amp; LOOK TARGET</figcaption>
+                            </figure>
+                            <figure class="lab-media">
+                                <img src="assets/img/blender-mcp-retopology.jpg" width="1904" height="836" loading="lazy" alt="Blender viewport showing the dense triangulated character mesh beside the clean quad retopology">
+                                <figcaption class="font-mono" data-i18n="lab_fig_1">TRIANGULATED SOURCE → QUAD RETOPOLOGY</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="lab-stats font-mono">
+                            <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s1_label">SOURCE MESH</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s1_val">50,000 tris · all triangles</strong>
                             </div>
-                            <div class="comparison-layer comparison-overlay" id="comparisonOverlay">
-                                <img src="assets/img/blender-mcp-retopology.jpg" width="1904" height="836" loading="lazy" alt="Blender comparison showing a dense character mesh beside a clean retopologized mesh">
-                                <span class="comparison-badge font-mono" data-i18n="lab_fig_1">DENSE MESH → CLEAN TOPOLOGY</span>
+                            <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s2_label">RETOPOLOGY</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s2_val">17,531 faces · 99.7% quads</strong>
                             </div>
-                            <div class="comparison-divider" id="comparisonDivider" aria-hidden="true">
-                                <div class="divider-line"></div>
-                                <div class="divider-knob">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                                </div>
-                                <div class="divider-line"></div>
+                            <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s3_label">BAKED MAPS</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s3_val">5 PBR maps · 2K</strong>
                             </div>
-                            <div class="comparison-hint font-mono" aria-hidden="true">
-                                <span data-i18n="slider_instruction">DRAG TO COMPARE MESH PIPELINE</span>
+                            <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s4_label">AUTOMATED CHECKS</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s4_val">Manifold · single shell · re-import</strong>
                             </div>
                         </div>
+                        <p class="lab-note" data-i18n="lab_exp1_note">The agent runs cleanup, remeshing, UVs and baking inside Blender through MCP. Every run has to pass automated checks before I review the result visually.</p>
                     </article>
 
                     <article class="blender-lab-card spotlight-card blender-lab-card-motion">
@@ -688,6 +696,40 @@
                             </div>
                         </div>
                         <p class="lab-summary" data-i18n="lab_exp2_desc">Authoring character animations in 3D Blender space and automatically rendering baked normal/color sprite frames for real-time 2D game engines.</p>
+
+                        <div class="sprite-result">
+                            <div class="sprite-stage">
+                                <div class="sprite-player" role="img" aria-label="Zombie boss walk cycle playing from the exported spritesheet"></div>
+                                <span class="sprite-caption font-mono" data-i18n="sprite_caption">LIVE · PLAYED FROM THE SHEET</span>
+                            </div>
+                            <div class="sprite-details">
+                                <figure class="lab-media sprite-strip">
+                                    <div class="sprite-strip-scroll" tabindex="0" role="group" aria-label="Exported walk spritesheet, scroll horizontally">
+                                        <img src="assets/img/zombieboss-walk-sheet.webp" width="7680" height="256" loading="lazy" alt="Exported 30-frame walk spritesheet of the zombie boss">
+                                    </div>
+                                    <figcaption class="font-mono" data-i18n="lab_fig_5">EXPORTED SPRITESHEET · WALK · 30 FRAMES</figcaption>
+                                </figure>
+                                <div class="lab-stats font-mono">
+                                <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s5_label">OUTPUT</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s5_val">28 sheets · 7 animations</strong>
+                            </div>
+                            <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s6_label">DIRECTIONS</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s6_val">2 cameras, rendered separately</strong>
+                            </div>
+                            <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s7_label">CELLS</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s7_val">512 px · 30 and 50 frames</strong>
+                            </div>
+                            <div class="lab-stat">
+                                <span class="lab-stat-label" data-i18n="lab_s8_label">ALIGNMENT</span>
+                                <strong class="lab-stat-val" data-i18n="lab_s8_val">Center drift ≤ 0.5 px</strong>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="lab-video-pair">
                             <figure class="lab-media">
                                 <video class="project-video" muted loop playsinline controls preload="none" poster="assets/img/blender-mcp-animation-poster.jpg" aria-label="Blender character animation experiment">
@@ -716,59 +758,71 @@
                     <div class="vr-lab-copy">
                         <span class="font-mono lab-number">EXPERIMENT 03</span>
                         <h3 data-i18n="lab_exp3_title">UCA VR Museum</h3>
-                        <p data-i18n="lab_exp3_desc">An interactive virtual museum application developed for VR headsets, focusing on continuous spatial locomotion, object inspectability, and ambient acoustic zones.</p>
+                        <p data-i18n="lab_exp3_desc">A virtual museum prototype I programmed in Unreal Engine 4 as my university thesis project at UCA. Visitors move through the rooms in VR, inspect exhibits, open information panels, and watch archive footage.</p>
                         <div class="lab-tags font-mono" aria-label="Experiment topics">
-                            <span>VR HEADSETS</span>
-                            <span>SPATIAL AUDIO</span>
-                            <span>INTERACTION</span>
+                            <span>UNREAL ENGINE 4</span>
+                            <span>PC VR</span>
+                            <span>THESIS PROJECT</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- Earlier UE4 Research -->
-                <div class="earlier-research-heading">
-                    <span class="font-mono" data-i18n="ue4_studies_kicker">TECHNICAL STUDIES</span>
-                    <h3 data-i18n="ue4_studies_title">Unreal Engine 4 Mechanics</h3>
-                </div>
-                <div class="research-grid">
-                    <article class="research-card spotlight-card research-card-violet">
-                        <div class="research-media">
-                            <video class="project-video" muted loop playsinline controls preload="none" poster="assets/img/PP-M1-poster.jpg" aria-label="Animation retargeting demonstration">
-                                <source data-src="assets/img/PP-M1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="research-copy">
-                            <span class="font-mono">RIGGING / ANIMATION</span>
-                            <h3 data-i18n="ue4_m1_title">Animation Retargeting</h3>
-                            <p data-i18n="ue4_m1_desc">Skeletal retargeting between diverse humanoid proportions.</p>
-                        </div>
-                    </article>
+                <div class="prototype-archive research-archive">
+                    <details class="archive-drawer">
+                        <summary>
+                            <span>
+                                <strong data-i18n="ue4_studies_title">Unreal Engine 4 Mechanics</strong>
+                                <small data-i18n="ue4_studies_kicker">Earlier personal studies: retargeting, runtime mesh swap, shield VFX</small>
+                            </span>
+                            <span class="summary-action font-mono">
+                                <span data-i18n="archive_explore">EXPLORE MECHANICS</span>
+                                <svg class="icon icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </summary>
+                        <div class="archive-content">
+                            <div class="research-grid">
+                                <article class="research-card spotlight-card research-card-violet">
+                                    <div class="research-media">
+                                        <video class="project-video" muted loop playsinline controls preload="none" poster="assets/img/PP-M1-poster.jpg" aria-label="Animation retargeting demonstration">
+                                            <source data-src="assets/img/PP-M1.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="research-copy">
+                                        <span class="font-mono">RIGGING / ANIMATION</span>
+                                        <h3 data-i18n="ue4_m1_title">Animation Retargeting</h3>
+                                        <p data-i18n="ue4_m1_desc">Skeletal retargeting between diverse humanoid proportions.</p>
+                                    </div>
+                                </article>
 
-                    <article class="research-card spotlight-card research-card-cyan">
-                        <div class="research-media">
-                            <video class="project-video" muted loop playsinline controls preload="none" poster="assets/img/PP-M2-poster.jpg" aria-label="Runtime character swap demonstration">
-                                <source data-src="assets/img/PP-M2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="research-copy">
-                            <span class="font-mono">RUNTIME SYSTEMS</span>
-                            <h3 data-i18n="ue4_m2_title">Dynamic Mesh Swap</h3>
-                            <p data-i18n="ue4_m2_desc">Seamless runtime character swapping without state interruption.</p>
-                        </div>
-                    </article>
+                                <article class="research-card spotlight-card research-card-cyan">
+                                    <div class="research-media">
+                                        <video class="project-video" muted loop playsinline controls preload="none" poster="assets/img/PP-M2-poster.jpg" aria-label="Runtime character swap demonstration">
+                                            <source data-src="assets/img/PP-M2.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="research-copy">
+                                        <span class="font-mono">RUNTIME SYSTEMS</span>
+                                        <h3 data-i18n="ue4_m2_title">Dynamic Mesh Swap</h3>
+                                        <p data-i18n="ue4_m2_desc">Seamless runtime character swapping without state interruption.</p>
+                                    </div>
+                                </article>
 
-                    <article class="research-card spotlight-card research-card-lime">
-                        <div class="research-media">
-                            <video class="project-video" muted loop playsinline controls preload="none" poster="assets/img/PP-M3-poster.jpg" aria-label="VFX state machine demonstration">
-                                <source data-src="assets/img/PP-M3.mp4" type="video/mp4">
-                            </video>
+                                <article class="research-card spotlight-card research-card-lime">
+                                    <div class="research-media">
+                                        <video class="project-video" muted loop playsinline controls preload="none" poster="assets/img/PP-M3-poster.jpg" aria-label="VFX state machine demonstration">
+                                            <source data-src="assets/img/PP-M3.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="research-copy">
+                                        <span class="font-mono">VFX / STATE</span>
+                                        <h3 data-i18n="ue4_m3_title">Shield State Machines</h3>
+                                        <p data-i18n="ue4_m3_desc">Shield activation, impact dissipation, and audio sync logic.</p>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <div class="research-copy">
-                            <span class="font-mono">VFX / STATE</span>
-                            <h3 data-i18n="ue4_m3_title">Shield State Machines</h3>
-                            <p data-i18n="ue4_m3_desc">Shield activation, impact dissipation, and audio sync logic.</p>
-                        </div>
-                    </article>
+                    </details>
                 </div>
             </div>
         </section>

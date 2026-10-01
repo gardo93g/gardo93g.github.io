@@ -1551,133 +1551,124 @@ dialog:focus-visible {
     gap: 1.25rem;
 }
 
-/* Interactive Mesh Comparison Slider */
-.mesh-comparison-slider {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 7.2;
-    min-height: 280px;
-    overflow: hidden;
-    border: 1px solid var(--line-strong);
-    background: #030507;
-    cursor: ew-resize;
-    user-select: none;
-    touch-action: none;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+/* Static figures, stat readouts and live sprite */
+.lab-figures {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.lab-figures .lab-media {
+    padding-bottom: 2rem;
+}
+
+.lab-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 0.75rem 1.25rem;
     margin-top: 1.25rem;
-}
-
-.mesh-comparison-slider:focus-visible {
-    outline: 2px solid var(--cyan);
-    outline-offset: 4px;
-}
-
-.comparison-layer {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.comparison-layer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-}
-
-.comparison-overlay {
-    z-index: 2;
-    clip-path: polygon(0 0, var(--slider-pos, 50%) 0, var(--slider-pos, 50%) 100%, 0 100%);
-    transition: clip-path 0s;
-}
-
-.comparison-badge {
-    position: absolute;
-    top: 1rem;
-    padding: 0.35rem 0.65rem;
-    background: rgba(7, 10, 15, 0.88);
-    color: var(--cyan);
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
-    backdrop-filter: blur(8px);
+    padding: 0.9rem 1.1rem;
     border: 1px solid var(--line);
+    background: rgba(0, 0, 0, 0.35);
     border-radius: var(--radius-sm);
-    pointer-events: none;
-    z-index: 3;
 }
 
-.comparison-base .comparison-badge {
-    right: 1rem;
-}
-
-.comparison-overlay .comparison-badge {
-    left: 1rem;
-}
-
-.comparison-divider {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: var(--slider-pos, 50%);
-    width: 36px;
-    margin-left: -18px;
+.lab-stat {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 4;
-    pointer-events: none;
+    gap: 0.2rem;
 }
 
-.divider-line {
-    width: 2px;
-    flex: 1;
-    background: var(--cyan);
-    box-shadow: 0 0 8px rgba(var(--cyan-rgb), 0.6);
+.lab-stat-label {
+    color: var(--cyan);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
 }
 
-.divider-knob {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #070a0f;
-    border: 2px solid var(--cyan);
-    box-shadow: 0 0 16px rgba(var(--cyan-rgb), 0.45), 0 4px 12px rgba(0, 0, 0, 0.8);
+.lab-stat-val {
+    color: var(--text);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.lab-note {
+    max-width: 760px;
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+}
+
+.sprite-result {
+    display: grid;
+    grid-template-columns: 256px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+    margin-bottom: 1.25rem;
+}
+
+.sprite-stage {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.15rem;
-    color: var(--cyan);
+    min-height: 288px;
+    border: 1px solid var(--line-strong);
+    background: #b9b1a9;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
 }
 
-.divider-knob svg {
-    width: 11px;
-    height: 11px;
+.sprite-player {
+    width: 256px;
+    height: 256px;
+    background: url('assets/img/zombieboss-walk-sheet.webp') 0 0 / 7680px 256px no-repeat;
+    animation: spriteWalk 1.25s steps(30) infinite;
 }
 
-.comparison-hint {
+@keyframes spriteWalk {
+    to { background-position: -7680px 0; }
+}
+
+.sprite-caption {
     position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.35rem 0.85rem;
-    background: rgba(7, 10, 15, 0.88);
-    border: 1px solid rgba(var(--cyan-rgb), 0.4);
-    color: var(--text-soft);
-    font-size: 0.62rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.4rem 0.75rem;
+    background: rgba(7, 10, 15, 0.85);
+    color: var(--cyan);
+    font-size: 0.6rem;
     letter-spacing: 0.08em;
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    pointer-events: none;
-    z-index: 3;
-    transition: opacity 300ms ease;
 }
 
-.mesh-comparison-slider.is-interacting .comparison-hint {
-    opacity: 0;
+.sprite-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.lab-media.sprite-strip {
+    padding-bottom: 2rem;
+    background: #b9b1a9;
+}
+
+.sprite-strip-scroll {
+    overflow-x: auto;
+}
+
+.lab-media .sprite-strip-scroll img {
+    width: auto;
+    max-width: none;
+    height: 150px;
+}
+
+.research-archive {
+    margin-top: 0;
+}
+
+.research-archive .research-grid {
+    padding-top: 0.25rem;
 }
 
 .lab-media {
@@ -1716,7 +1707,7 @@ dialog:focus-visible {
     padding: clamp(1.5rem, 3vw, 2.5rem);
     border: 1px solid var(--line);
     background: var(--bg-panel);
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .vr-lab-media {
@@ -1752,20 +1743,6 @@ dialog:focus-visible {
 }
 
 /* Earlier Research Grid */
-.earlier-research-heading {
-    margin-bottom: 1.5rem;
-}
-
-.earlier-research-heading span {
-    color: var(--cyan);
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-}
-
-.earlier-research-heading h3 {
-    margin-top: 0.35rem;
-}
-
 .research-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2404,7 +2381,9 @@ dialog::backdrop {
         gap: 1rem;
     }
 
-    .lab-video-pair {
+    .lab-video-pair,
+    .lab-figures,
+    .sprite-result {
         grid-template-columns: 1fr;
     }
 

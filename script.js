@@ -117,17 +117,36 @@
             section_03_title: 'Blender + MCP & Engine Studies.',
             section_03_subtitle: 'Exploring automated character retopology, shader pipelines, Blender-to-game spritesheets, and VR spatial navigation.',
             lab_exp1_title: 'Automated Character Pipeline',
-            lab_exp1_desc: 'Using Blender via Model Context Protocol (MCP) to automate iteration from high-poly character sculpts to clean, animation-ready quad topology and stylized shader setups.',
-            lab_fig_1: 'DENSE MESH → CLEAN TOPOLOGY',
-            lab_fig_2: 'LOOK DEVELOPMENT STUDY',
+            lab_exp1_desc: 'Using Blender through the Model Context Protocol (MCP) to take a dense, fully triangulated source model to a clean quad-based mesh with baked PBR textures.',
+            lab_exp1_note: 'The agent runs cleanup, remeshing, UVs and baking inside Blender through MCP. Every run has to pass automated checks before I review the result visually.',
+            lab_s1_label: 'SOURCE MESH',
+            lab_s1_val: '50,000 tris · all triangles',
+            lab_s2_label: 'RETOPOLOGY',
+            lab_s2_val: '17,531 faces · 99.7% quads',
+            lab_s3_label: 'BAKED MAPS',
+            lab_s3_val: '5 PBR maps · 2K',
+            lab_s4_label: 'AUTOMATED CHECKS',
+            lab_s4_val: 'Manifold · single shell · re-import',
+            lab_s5_label: 'OUTPUT',
+            lab_s5_val: '28 sheets · 7 animations',
+            lab_s6_label: 'DIRECTIONS',
+            lab_s6_val: '2 cameras, rendered separately',
+            lab_s7_label: 'CELLS',
+            lab_s7_val: '512 px · 30 and 50 frames',
+            lab_s8_label: 'ALIGNMENT',
+            lab_s8_val: 'Center drift ≤ 0.5 px',
+            sprite_caption: 'LIVE · PLAYED FROM THE SHEET',
+            lab_fig_5: 'EXPORTED SPRITESHEET · WALK · 30 FRAMES',
+            lab_fig_1: 'TRIANGULATED SOURCE → QUAD RETOPOLOGY',
+            lab_fig_2: 'CONCEPT & LOOK TARGET',
             lab_exp2_title: 'Motion to 2D Spritesheet Workflow',
             lab_exp2_desc: 'Authoring character animations in 3D Blender space and automatically rendering baked normal/color sprite frames for real-time 2D game engines.',
             lab_fig_3: 'ANIMATION RIGGING TEST',
             lab_fig_4: 'SPRITESHEET GENERATION',
             vr_duration_label: 'VR IMMERSIVE WALKTHROUGH',
             lab_exp3_title: 'UCA VR Museum',
-            lab_exp3_desc: 'An interactive virtual museum application developed for VR headsets, focusing on continuous spatial locomotion, object inspectability, and ambient acoustic zones.',
-            ue4_studies_kicker: 'TECHNICAL STUDIES',
+            lab_exp3_desc: 'A virtual museum prototype I programmed in Unreal Engine 4 as my university thesis project at UCA. Visitors move through the rooms in VR, inspect exhibits, open information panels, and watch archive footage.',
+            ue4_studies_kicker: 'Earlier personal studies: retargeting, runtime mesh swap, shield VFX',
             ue4_studies_title: 'Unreal Engine 4 Mechanics',
             ue4_m1_title: 'Animation Retargeting',
             ue4_m1_desc: 'Skeletal retargeting between diverse humanoid proportions.',
@@ -155,7 +174,6 @@
             modal_block_03: 'KEY TECHNICAL RESULTS',
             modal_block_04: 'APPLIED TECHNOLOGIES',
             btn_close_breakdown: 'CLOSE BREAKDOWN',
-            slider_instruction: 'DRAG TO COMPARE MESH PIPELINE',
             toast_copied: 'Email copied to clipboard: ',
             toast_copy_error: 'Could not copy automatically. Email: '
         },
@@ -262,17 +280,36 @@
             section_03_title: 'Estudios con Blender + MCP y Motores.',
             section_03_subtitle: 'Exploración de retopología automatizada de personajes, shaders, generación de spritesheets desde Blender y navegación espacial en RV.',
             lab_exp1_title: 'Pipeline Automatizado de Personajes',
-            lab_exp1_desc: 'Uso de Blender mediante Model Context Protocol (MCP) para iterar automáticamente desde esculturas de alto poligonaje hasta topologías limpias listas para animación y shaders estilizados.',
-            lab_fig_1: 'MALLA DENSA → TOPOLOGÍA LIMPIA',
-            lab_fig_2: 'ESTUDIO DE DESARROLLO VISUAL',
+            lab_exp1_desc: 'Uso de Blender mediante Model Context Protocol (MCP) para llevar un modelo denso y totalmente triangulado a una malla limpia basada en quads con texturas PBR horneadas.',
+            lab_exp1_note: 'El agente ejecuta la limpieza, el remallado, los UV y el horneado dentro de Blender mediante MCP. Cada ejecución debe superar comprobaciones automáticas antes de que yo revise el resultado visualmente.',
+            lab_s1_label: 'MALLA DE ORIGEN',
+            lab_s1_val: '50.000 tris · todo triángulos',
+            lab_s2_label: 'RETOPOLOGÍA',
+            lab_s2_val: '17.531 caras · 99,7 % quads',
+            lab_s3_label: 'MAPAS HORNEADOS',
+            lab_s3_val: '5 mapas PBR · 2K',
+            lab_s4_label: 'COMPROBACIONES AUTOMÁTICAS',
+            lab_s4_val: 'Manifold · una sola pieza · reimportación',
+            lab_s5_label: 'SALIDA',
+            lab_s5_val: '28 sheets · 7 animaciones',
+            lab_s6_label: 'DIRECCIONES',
+            lab_s6_val: '2 cámaras, renderizadas por separado',
+            lab_s7_label: 'CELDAS',
+            lab_s7_val: '512 px · 30 y 50 cuadros',
+            lab_s8_label: 'ALINEACIÓN',
+            lab_s8_val: 'Deriva del centro ≤ 0,5 px',
+            sprite_caption: 'EN VIVO · REPRODUCIDO DESDE EL SHEET',
+            lab_fig_5: 'SPRITESHEET EXPORTADO · CAMINATA · 30 CUADROS',
+            lab_fig_1: 'ORIGEN TRIANGULADO → RETOPOLOGÍA EN QUADS',
+            lab_fig_2: 'CONCEPTO Y OBJETIVO VISUAL',
             lab_exp2_title: 'Flujo de Animación a Spritesheets 2D',
             lab_exp2_desc: 'Creación de animaciones 3D en Blender y renderizado automático de cuadros de sprites con color y normales para motores de juegos 2D.',
             lab_fig_3: 'PRUEBA DE RIGGING Y ANIMACIÓN',
             lab_fig_4: 'GENERACIÓN DE SPRITESHEET',
             vr_duration_label: 'RECORRIDO INMERSIVO VR',
             lab_exp3_title: 'Museo Virtual VR UCA',
-            lab_exp3_desc: 'Aplicación de museo virtual interactivo desarrollada para visores VR, enfocada en locomoción espacial fluida, inspección de objetos y zonas acústicas ambientales.',
-            ue4_studies_kicker: 'ESTUDIOS TÉCNICOS',
+            lab_exp3_desc: 'Prototipo de museo virtual que programé en Unreal Engine 4 como proyecto de tesis universitaria en la UCA. Los visitantes recorren las salas en VR, inspeccionan las piezas, abren paneles de información y ven material de archivo.',
+            ue4_studies_kicker: 'Estudios personales anteriores: retargeting, cambio de malla en ejecución, VFX de escudo',
             ue4_studies_title: 'Mecánicas en Unreal Engine 4',
             ue4_m1_title: 'Retargeting de Animación',
             ue4_m1_desc: 'Retargeting esquelético entre diversas proporciones humanoides.',
@@ -300,7 +337,6 @@
             modal_block_03: 'RESULTADOS TÉCNICOS CLAVE',
             modal_block_04: 'TECNOLOGÍAS APLICADAS',
             btn_close_breakdown: 'CERRAR FICHA',
-            slider_instruction: 'ARRASTRA PARA COMPARAR MALLAS',
             toast_copied: 'Correo copiado al portapapeles: ',
             toast_copy_error: 'No se pudo copiar automáticamente. Correo: '
         }
@@ -1086,60 +1122,6 @@
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
-
-    // ==========================================================================
-    // Interactive Mesh Comparison Slider (Blender R&D)
-    // ==========================================================================
-    const meshSlider = document.getElementById('meshComparisonSlider');
-    if (meshSlider) {
-        let isDragging = false;
-        let currentPos = 50;
-
-        function updateSlider(clientX) {
-            const rect = meshSlider.getBoundingClientRect();
-            const offset = clientX - rect.left;
-            let pct = (offset / rect.width) * 100;
-            pct = Math.max(2, Math.min(98, pct));
-            currentPos = pct;
-            meshSlider.style.setProperty('--slider-pos', `${pct.toFixed(2)}%`);
-        }
-
-        meshSlider.addEventListener('pointerdown', (e) => {
-            isDragging = true;
-            meshSlider.classList.add('is-interacting');
-            try { meshSlider.setPointerCapture(e.pointerId); } catch (_) {}
-            updateSlider(e.clientX);
-        });
-
-        meshSlider.addEventListener('pointermove', (e) => {
-            if (!isDragging) return;
-            updateSlider(e.clientX);
-        });
-
-        const stopDragging = (e) => {
-            if (isDragging) {
-                isDragging = false;
-                try { meshSlider.releasePointerCapture(e.pointerId); } catch (_) {}
-            }
-        };
-
-        meshSlider.addEventListener('pointerup', stopDragging);
-        meshSlider.addEventListener('pointercancel', stopDragging);
-
-        meshSlider.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                currentPos = Math.max(2, currentPos - 4);
-                meshSlider.classList.add('is-interacting');
-                meshSlider.style.setProperty('--slider-pos', `${currentPos.toFixed(2)}%`);
-            } else if (e.key === 'ArrowRight') {
-                e.preventDefault();
-                currentPos = Math.min(98, currentPos + 4);
-                meshSlider.classList.add('is-interacting');
-                meshSlider.style.setProperty('--slider-pos', `${currentPos.toFixed(2)}%`);
-            }
-        });
-    }
 
     // Set Dynamic Year
     document.querySelectorAll('[data-current-year]').forEach((element) => {
