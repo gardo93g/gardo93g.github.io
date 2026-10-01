@@ -1212,73 +1212,6 @@ dialog:focus-visible {
     font-size: 0.95rem;
 }
 
-/* Sample Rail */
-.sample-rail-heading {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2.5rem 0 0.85rem;
-}
-
-.sample-rail-heading p {
-    color: var(--text);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-}
-
-.sample-rail-heading span {
-    color: var(--text-muted);
-    font-size: 0.65rem;
-    letter-spacing: 0.06em;
-}
-
-.sample-rail {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.85rem;
-}
-
-.sample-card {
-    display: grid;
-    grid-template-columns: 92px 1fr;
-    gap: 1rem;
-    align-items: center;
-    min-height: 92px;
-    overflow: hidden;
-    padding: 0.55rem;
-    color: var(--text);
-    border: 1px solid var(--line);
-    background: #0b1118;
-    text-align: left;
-    cursor: pointer;
-    transition: all 160ms ease;
-}
-
-.sample-card:hover,
-.sample-card.active {
-    border-color: rgba(var(--cyan-rgb), 0.65);
-    background: rgba(var(--cyan-rgb), 0.06);
-}
-
-.sample-card img {
-    width: 92px;
-    height: 74px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.sample-card strong {
-    font-size: 0.95rem;
-}
-
-.sample-card small {
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    text-transform: uppercase;
-}
-
 /* ==========================================================================
    Experience Section & Timeline
    ========================================================================== */
@@ -2391,18 +2324,6 @@ dialog::backdrop {
         gap: 2.5rem;
     }
 
-    .case-video-frame {
-        width: min(100%, 320px);
-    }
-
-    .landscape-active .case-video-frame {
-        width: 100%;
-    }
-
-    .sample-rail {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .timeline-item {
         grid-template-columns: minmax(130px, 0.3fr) minmax(0, 0.7fr);
     }
@@ -2478,16 +2399,11 @@ dialog::backdrop {
         min-height: 0;
     }
 
-    .sample-rail {
-        grid-template-columns: 1fr;
-    }
-
     .timeline-item {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    .lab-image-pair,
     .lab-video-pair {
         grid-template-columns: 1fr;
     }

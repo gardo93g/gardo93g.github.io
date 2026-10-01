@@ -71,7 +71,6 @@
             fact_focus: 'FOCUS',
             fact_built_with: 'BUILT WITH',
             btn_deep_dive: 'Technical Deep-Dive',
-            btn_visit_harmony: 'Visit Harmony Games',
             section_02_index: '02 // CAREER TIMELINE',
             section_02_title: 'Experience & Track Record.',
             section_02_subtitle: '5+ years collaborating with international and US-based teams on mobile game production, rapid prototyping, and software engineering.',
@@ -217,7 +216,6 @@
             fact_focus: 'ENFOQUE',
             fact_built_with: 'TECNOLOGÍAS',
             btn_deep_dive: 'Ficha Técnica',
-            btn_visit_harmony: 'Visitar Harmony Games',
             section_02_index: '02 // TRAYECTORIA PROFESIONAL',
             section_02_title: 'Experiencia y Trayectoria.',
             section_02_subtitle: 'Más de 5 años colaborando con equipos internacionales y de EE.UU. en producción de juegos móviles, prototipado rápido e ingeniería de software.',
@@ -323,16 +321,16 @@
                 challenge: 'Integrating complex progression maps, event entry triggers, boosters, and multi-tier reward popups into a live mobile title. The primary technical hurdle was maintaining smooth 60 FPS scrolling and transition feel across low-end Android and iOS devices while dealing with asynchronous Firebase Remote Config updates and dynamic Addressables asset streaming without memory bloat or GC spikes.',
                 architecture: 'Architected a decoupled, event-driven UI state machine where meta-screens observe reactive game state rather than polling backend models. Implemented Addressables-based prefab instancing with strict memory release lifecycle hooks, pooled popup queue coordinators to gracefully handle cascading rewards, and optimistic UI client updates with rollback reconciliation.',
                 highlights: [
-                    'Zero runtime GC allocations during map zooming and panning.',
-                    'Sub-100ms UI screen transition latency on target low-tier mobile chipsets.',
-                    'Modular event banner architecture supporting live hot-reloaded campaigns without app binary updates.',
-                    'Robust offline resilience and network drop recovery during reward claims.'
+                    'Map zooming and panning tuned to avoid per-frame allocations.',
+                    'Fast screen transitions on low-tier mobile devices.',
+                    'Modular event banners driven by remote config, so campaigns change without an app update.',
+                    'Reward claims that recover cleanly from network drops.'
                 ],
                 stackTags: ['Unity 2022 LTS', 'C#', 'Firebase Remote Config', 'Addressables', 'DOTween Pro', 'UniTask', 'uGUI']
             },
             'harmony-tile': {
                 title: 'Gameplay Motion & Feedback',
-                description: 'Crafted tactile tile physics feel, dealing choreographies, valid placement hints, and snappy board feedback running at steady 60 FPS.',
+                description: 'Crafted tactile tile physics feel, dealing choreographies, valid placement hints, and snappy board feedback tuned for smooth play on mobile.',
                 role: 'Gameplay & UI Motion',
                 focus: 'Tactile Game Feel, Input Handling, Non-Alloc Sequences',
                 stack: 'Unity · C# · DOTween · uGUI · Particle FX',
@@ -340,10 +338,10 @@
                 challenge: 'Translating classic domino board mechanics into a tactile, responsive mobile experience. The design required custom tile dealing choreographies, physics-inspired drag-and-drop feedback, valid placement indicator sweeps, and instant board validation without sacrificing framerate consistency.',
                 architecture: 'Created a non-allocating tween sequence manager utilizing pre-cached easing curves. Designed a spatial hash-based grid snapping detection system that minimizes raycast queries per frame. Integrated multi-touch pointer event handlers with DOTween scale/tilt feedback to deliver immediate sensory responsiveness.',
                 highlights: [
-                    'Instant drag-to-board response under 16ms input latency.',
+                    'Immediate drag-to-board response to touch input.',
                     'Custom Bezier motion curves for dealing animation sequences.',
-                    'Non-allocating collision and placement validation routines.',
-                    'Micro-tuned haptic and visual cues on tile connection.'
+                    'Placement validation designed to avoid runtime allocations.',
+                    'Tuned haptic and visual cues on tile connection.'
                 ],
                 stackTags: ['Unity', 'C#', 'DOTween Pro', 'uGUI', 'Custom Easings', 'Object Pooling']
             },
@@ -357,7 +355,7 @@
                 challenge: 'Designing high-energy streak multipliers, cascading combo rewards, and screen-shake impact feedback. The key challenge was rendering multiple simultaneous particle bursts and floating number tickers without triggering canvas rebuilds or frame drops during peak combo moments.',
                 architecture: 'Built a specialized VFX canvas hierarchy isolating particle rendering from core uGUI layouts to eliminate canvas redraw penalties. Utilized custom ParticleSystem sub-emitters paired with DOTween sequenced punch animations and audio bus triggers for synchronized audiovisual punch.',
                 highlights: [
-                    'Zero canvas redraw impact during multi-layered 500+ particle bursts.',
+                    'Layered particle bursts isolated from uGUI canvases to avoid layout rebuilds.',
                     'Pre-warmed particle and floating label object pools.',
                     'Modular streak multiplier manager easily tunable via ScriptableObjects.',
                     'Adaptive particle density scaling for low-spec mobile profiles.'
@@ -374,7 +372,7 @@
                 challenge: 'Developing an end-to-end standalone minigame mode with distinct board mechanics, level progression trees, and reward distribution within a tight sprint milestone.',
                 architecture: 'Implemented a clean MVP (Model-View-Presenter) architectural pattern isolating core puzzle simulation logic from presentation layers. Level parameters, obstacle modifiers, and reward tables were encapsulated into ScriptableObjects, allowing game designers to iterate balance directly in the Unity Inspector without developer intervention.',
                 highlights: [
-                    'Shipped full feature loop ahead of release schedule with zero critical post-launch bugs.',
+                    'Owned the full feature loop from first prototype to release.',
                     'Design-friendly ScriptableObject level authoring pipeline.',
                     'Seamless integration with the main game economy and currency systems.'
                 ],
@@ -407,7 +405,7 @@
                 architecture: 'Integrated a tiered audio playback system with dynamic pitch randomization to prevent player auditory fatigue during repetitive wins. Coordinated 3D camera zoom with UI canvas modal entry.',
                 highlights: [
                     'Curated and tuned all sound effects for punchy reward feedback.',
-                    'Dynamic pitch variation reducing SFX monotony by 100%.',
+                    'Dynamic pitch variation so repeated wins do not sound identical.',
                     'Responsive 3D/2D layered camera composition.'
                 ],
                 stackTags: ['Unity', 'C#', 'SFX Bus Integration', 'AudioSource Pooling', 'DOTween']
@@ -424,16 +422,16 @@
                 challenge: 'Integrar mapas de progresión complejos, disparadores de eventos en vivo, potenciadores y ventanas emergentes de recompensa en un título móvil en producción. El principal reto técnico fue mantener 60 FPS estables y transiciones fluidas en dispositivos Android e iOS de gama baja, gestionando actualizaciones asíncronas de Firebase Remote Config y streaming de assets con Addressables sin generar sobrecarga de memoria ni picos de Garbage Collection (GC).',
                 architecture: 'Se estructuró una máquina de estados de UI reactiva y desacoplada donde las pantallas observan el estado del juego en lugar de realizar consultas continuas. Se implementó instanciación de prefabs con Addressables y gestión estricta del ciclo de vida de memoria, coordinadores de cola para recompensas en cascada y actualizaciones optimistas en cliente con reconciliación automática.',
                 highlights: [
-                    'Cero asignaciones de GC en tiempo de ejecución durante el paneo y zoom del mapa.',
-                    'Latencia de transición de pantallas inferior a 100ms en dispositivos móviles de gama de entrada.',
-                    'Arquitectura modular de banners para eventos que permite campañas en vivo sin necesidad de recompilar la aplicación.',
-                    'Alta tolerancia a caídas de conexión y recuperación transparente durante el reclamo de recompensas.'
+                    'Paneo y zoom del mapa ajustados para evitar asignaciones de memoria por cuadro.',
+                    'Transiciones de pantalla rápidas en dispositivos móviles de gama de entrada.',
+                    'Banners de eventos modulares controlados por configuración remota: las campañas cambian sin actualizar la aplicación.',
+                    'Reclamo de recompensas que se recupera correctamente ante caídas de conexión.'
                 ],
                 stackTags: ['Unity 2022 LTS', 'C#', 'Firebase Remote Config', 'Addressables', 'DOTween Pro', 'UniTask', 'uGUI']
             },
             'harmony-tile': {
                 title: 'Animación de Gameplay y Feedback',
-                description: 'Física y sensación táctil de fichas, animaciones de reparto, indicadores visuales de jugadas válidas y validación instantánea del tablero a 60 FPS constantes.',
+                description: 'Física y sensación táctil de fichas, animaciones de reparto, indicadores visuales de jugadas válidas y validación instantánea del tablero, ajustado para un juego fluido en móvil.',
                 role: 'Motion de Gameplay y UI',
                 focus: 'Game Feel Táctil, Manejo de Input, Secuencias sin Asignación de Memoria',
                 stack: 'Unity · C# · DOTween · uGUI · Efectos de Partículas',
@@ -441,9 +439,9 @@
                 challenge: 'Trasladar las mecánicas clásicas del juego de dominó a una experiencia móvil táctil y altamente responsiva. El diseño requería coreografías de reparto de fichas, arrastre con respuesta física, guías visuales de colocación válida y validación instantánea del tablero sin comprometer la tasa de cuadros por segundo.',
                 architecture: 'Desarrollo de un gestor de secuencias de animación sin asignación de memoria utilizando curvas de aceleración (easing) precacheadas. Diseño de un sistema de detección de encaje en cuadrícula basado en hashing espacial para minimizar consultas de raycast por cuadro. Integración de controladores táctiles con retroalimentación de escala e inclinación en DOTween.',
                 highlights: [
-                    'Respuesta de arrastre al tablero inmediata con latencia de entrada menor a 16ms.',
+                    'Respuesta inmediata al arrastrar fichas al tablero.',
                     'Curvas de Bezier personalizadas para las secuencias de reparto de fichas.',
-                    'Rutinas de validación de colisiones y colocación sin asignación de memoria.',
+                    'Validación de colocación diseñada para evitar asignaciones de memoria en ejecución.',
                     'Señales hápticas y visuales calibradas al momento de conectar fichas.'
                 ],
                 stackTags: ['Unity', 'C#', 'DOTween Pro', 'uGUI', 'Easings Personalizados', 'Object Pooling']
@@ -458,7 +456,7 @@
                 challenge: 'Diseñar multiplicadores de rachas de alto impacto, recompensas de combos en cascada y retroalimentación de vibración de pantalla. El reto fue renderizar múltiples ráfagas simultáneas de partículas y marcadores numéricos flotantes sin provocar reconstrucciones de canvas ni caídas de fotogramas durante los momentos de combo máximo.',
                 architecture: 'Construcción de una jerarquía de canvas de VFX independiente para aislar el renderizado de partículas del layout de uGUI, eliminando penalizaciones de redibujado. Uso de sub-emisores de ParticleSystem sincronizados con animaciones de impacto en DOTween y disparadores de audio en buses dedicados.',
                 highlights: [
-                    'Cero impacto de redibujado de canvas durante ráfagas de más de 500 partículas en capas.',
+                    'Ráfagas de partículas por capas aisladas de los canvas de uGUI para evitar reconstrucciones de layout.',
                     'Pools de objetos precalentados para partículas y etiquetas de puntuación flotante.',
                     'Gestor de multiplicadores modular fácilmente ajustable mediante ScriptableObjects.',
                     'Escalado adaptativo de densidad de partículas para perfiles móviles de bajo rendimiento.'
@@ -475,7 +473,7 @@
                 challenge: 'Desarrollar un modo de minijuego independiente de principio a fin, con mecánicas de tablero propias, árboles de progresión y distribución de recompensas dentro de un plazo de entrega exigente.',
                 architecture: 'Implementación del patrón arquitectónico MVP (Model-View-Presenter) para desacoplar la simulación del puzzle de las capas de presentación visual. Los parámetros de nivel, modificadores de obstáculos y tablas de premios se estructuraron en ScriptableObjects para permitir al equipo de diseño balancear el juego directamente en el Inspector de Unity.',
                 highlights: [
-                    'Entrega de la funcionalidad completa antes de la fecha límite sin incidencias críticas en producción.',
+                    'Responsable del ciclo completo de la funcionalidad, del primer prototipo al lanzamiento.',
                     'Pipeline de autoría de niveles ágil basado en ScriptableObjects para diseñadores.',
                     'Integración transparente con la economía global y sistema de monedas del juego.'
                 ],
@@ -508,7 +506,7 @@
                 architecture: 'Integración de un sistema de reproducción de audio por capas con variación aleatoria de tono para evitar la fatiga auditiva. Coordinación entre el zoom de cámara 3D y la animación de entrada del modal 2D.',
                 highlights: [
                     'Curaduría y calibración de todos los efectos de sonido para un feedback auditivo contundente.',
-                    'Variación dinámica de tono que reduce la monotonía sonora en un 100%.',
+                    'Variación dinámica de tono para que las victorias repetidas no suenen idénticas.',
                     'Composición responsiva multicámara 3D/2D.'
                 ],
                 stackTags: ['Unity', 'C#', 'Buses de SFX', 'Pools de AudioSource', 'DOTween']
@@ -865,7 +863,7 @@
     }
 
     openTheaterBtn?.addEventListener('click', () => {
-        const activeCard = document.querySelector('.case-picker .case-card.active') || document.querySelector('.sample-rail .sample-card.active');
+        const activeCard = document.querySelector('.case-picker .case-card.active');
         const videoSrc = activeCard?.dataset.video || 'assets/img/harmony-liveops-flow.mp4';
         const title = activeCard?.dataset.title || 'LiveOps & Progression Flow';
         openTheater(videoSrc, title);
